@@ -1,0 +1,82 @@
+site_name: NZSHM Documentation
+site_url: https://gns-science.github.io/nzshm-documentation
+repo_url: https://github.com/gns-science/nzshm-documentation
+repo_name: gns-science/nzshm-documentation
+
+nav:
+  - Introduction: introduction.md
+  - Science Processes:
+      - Intro: science_process/intro.md
+      - Source models: science_process/source_models.md
+      - Hazard: science_process/hazard.md
+      - Related: science_process/related.md
+  - Systems Architecture:
+      - Intro: architecture/intro.md
+      - Web Services: architecture/services.md
+      - Common Infrastructure: architecture/common_infrastructure.md
+  - Addendum: 
+      - README: readme.md
+
+theme:
+  name: material
+  language: en
+  #logo: assets/logo.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.indexes
+  #   - navigation.instant
+  #   - navigation.tabs.sticky
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      baselevel: 2
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+#  - meta
+# markdown_extensions:
+#   - pymdownx.emoji:
+#       emoji_index: !!python/name:materialx.emoji.twemoji
+#       emoji_generator: !!python/name:materialx.emoji.to_svg
+#   - pymdownx.critic
+#   - pymdownx.caret
+#   - pymdownx.mark
+#   - pymdownx.tilde
+#   - pymdownx.tabbed
+#   - attr_list
+#   - pymdownx.arithmatex:
+#       generic: true
+#   - pymdownx.highlight:
+#       linenums: false
+#   - pymdownx.superfences
+#   - pymdownx.inlinehilite
+#   - pymdownx.details
+#   - admonition  
+plugins:
+  - include-markdown
+  - search:
+      lang: en
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gns-science/nzshm-documentation
+      name: Github
+    - icon: material/email
+      link: "mailto:nshm@gns.cri.nz"
+#google_analytics:
+  #- UA-xxx
+  #- auto
