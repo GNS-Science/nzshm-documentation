@@ -15,8 +15,8 @@ nav:
       - Web Services: architecture/services.md
       - Common Infrastructure: architecture/common_infrastructure.md
   - Addendum: 
-      - Document mainatenance: readme.md
-      
+      - README: readme.md
+
 theme:
   name: material
   language: en
