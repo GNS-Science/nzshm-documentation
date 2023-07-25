@@ -14,7 +14,9 @@ nav:
       - Intro: architecture/intro.md
       - Web Services: architecture/services.md
       - Common Infrastructure: architecture/common_infrastructure.md
-
+  - Addendum: 
+      - Document mainatenance: readme.md
+      
 theme:
   name: material
   language: en
