@@ -2,6 +2,36 @@
 
 Web service API for the NSHM are [graphql](https://graphql.org/) APIs, providing flexibility and control for the consumer over what information the API returns. Graphql APIs include a type system, built in documentation and standard error handling.
 
+```mermaid
+graph TD
+    classDef nshm stroke:lightgreen, stroke-width:3px
+    classDef AWS stroke:orange, stroke-width:3px
+
+    N-APIGW[nshm-kororaa-apigw]:::nshm
+
+    subgraph API[NSHM Python API services]
+        K-API[kororaa-graphql-api]:::nshm
+        S-API[solvis-graphql-api]:::nshm
+        T-API[nshm-toshi-api]:::nshm        
+    end
+ 
+    subgraph SUP[<strong>NSHM support libraries</strong>]
+        toshi-hazard-store:::nshm
+        nzshm-model:::nshm
+        nzshm-common:::nshm
+        solvis-store:::nshm
+        solvis:::nshm
+        %% nzshm-model ~~~ nzshm-common ~~~ solvis
+        %% toshi-hazard-store ~~~ solvis-store
+    end
+
+    N-APIGW --> S-API
+    N-APIGW --> K-API
+    N-APIGW --> T-API    
+
+    API -.-> SUP
+```
+
 NSHM APIs and supporting packages are divided into domains or functional areas, each with a public github project source repository. These are:
  
 ## API Services
@@ -26,62 +56,9 @@ NSHM APIs and supporting packages are divided into domains or functional areas, 
 
 - **[nzshm-common](https://github.com/GNS-Science/nzshm-common-py/)** contains core information and functions used across other NSHM components. e.g. standard location definitions, grid resolution functions.
 
-## Dependencies diagram
- 
-```mermaid
----
-title: NSHM API dependencies
----
-flowchart
-    %% classDef nshm stroke:lightgreen, stroke-width:3px, fill: white
-    %% classDef AWS stroke:orange, stroke-width:3px, fill:white
 
-    N-APIGW[nshm-kororaa-apigw]:::nshm
+### NSHM sub-projects
 
-    subgraph API[<strong>NSHM Python API services</strong>]
-        K-API[kororaa-graphql-api]:::nshm
-        S-API[solvis-graphql-api]:::nshm
-        T-API[nshm-toshi-api]:::nshm        
-    end
-    subgraph PGA[<strong>Common Python dependencies</strong>]
-        python39 ~~~ graphene 
-        graphql ~~~ flask
-    end
-    subgraph SUP[<strong>NSHM support libraries</strong>]
-        toshi-hazard-store:::nshm
-        nzshm-model:::nshm
-        nzshm-common:::nshm
-        solvis-store:::nshm
-        solvis:::nshm
-        nzshm-model ~~~ nzshm-common ~~~ solvis
-        toshi-hazard-store ~~~ solvis-store
-    end
-    subgraph l[<strong>Legend</strong>]
-        a1[AWS service]:::AWS
-        l2[NSHM project]:::nshm
-        l3[external project]
-        a1 ~~~ l2 ~~~ l3
-    end
-
-    %%links
-    API -.-> SUP ~~~ l
-    API -.-> PGA ~~~ l  
-    N-APIGW --> S-API
-    N-APIGW --> K-API
-    N-APIGW --> T-API    
-```
-
-## More information
-
-The NSHM Computational Working Group (CWG) documentation project covers:
- - **NSHM CWG Scientific Processes** describes the processes and tools used to run experiments and build the NSHM models.
-
- - **NSHM CWG [Systems Architecture](https://github.com/GNS-Science/nzshm-documentation/architecture/)** covers the overarching design of the tools, services used run, publish and support the NSHM.
-
- - **NSHM CWG Technical Guidelines** describes standards and common technical processes used to maintain and operate the NSHM systems. 
-
- - **NSHM CWG Github Index** is a list of all the NSHM github project repositorys
- 
 Each NSHM github project repository should contain a `/docs` folder containing project-pecific information. Often these docs will be published as GH-pages e.g. for **toshi-hazard-store** :
 
  - project repository -> https://github.com/GNS-Science/toshi-hazard-store
