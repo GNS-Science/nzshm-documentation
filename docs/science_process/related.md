@@ -1,13 +1,13 @@
-A littel about the processes run outside of CWG that the NSHM requires
+A list of NSHM  processes and products that are run outside of CWG 
 
-### Strong Motion Site Database
+## Strong Motion Site Database
 
-### Ground Motion Models
+## Ground Motion Models
 
-### Distributed Models
+## Distributed Models
 
-### NZ COmmunity Fault Model
+## NZ Community Fault Model
 
-### Seismic Risk Workgin Group
+## Seismic Risk Working Group
 
-### Site Specific D Tables for SESEOC 
+## Site Specific D Tables for SESEOC 

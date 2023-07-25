@@ -1,49 +1,17 @@
-# NSHM Hazard processing flow
+# Hazard processing flows
+
 ```mermaid
 flowchart TD
     classDef nshm stroke:lightgreen, stroke-width:3px
     classDef AWS stroke:orange, stroke-width:3px
     classDef SVC stroke:powderblue, stroke-width:3px   
     
-    subgraph NSHM Hazard
-        direction TB
-
-        subgraph P1[Stage 1]
-            direction TB
-
-            RHR[/run hazard realizations/]:::nshm
-            runzi:::nshm
-            oq[openquake]
-            HR[(hazard realizations)]:::AWS
-
-            RHR --> |with| runzi
-            runzi -->|using| oq 
-            runzi -->|produces| HR
-        end
-
-        subgraph P2[Stage 2]
-            direction TB
-
-            RHA[/run hazard aggregations/]:::nshm
-            thp[toshi-hazard-post]:::nshm
-            HA[(hazard aggregations)]:::AWS
-
-            RHA -->|with| thp
-            thp -->|produces| HA            
-        end
-
-        subgraph P3[Stage 3]
-            direction TB
-
-            RHD[/run hazard disaggregations/]:::nshm
-            thp2[toshi-hazard-post]:::nshm
-            HD[(hazard disaggregations)]:::AWS
-
-            RHD -->|with| thp2
-            thp2 -->|produces| HD            
-        end
-
+    subgraph P1[Hazard processing]
+        RHR[/run hazard realizations/]:::nshm
+        RHA[/run hazard aggregations/]:::nshm
+        RHD[/run hazard disaggregations/]:::nshm
     end
+
     ENV{any of}
     AWS[NSHM AWS Batch]:::AWS
     HPC[HPC Cluster]:::SVC
@@ -51,20 +19,63 @@ flowchart TD
 
     %% links
     P1 -.-> |using| ENV
-    P2 -.-> |using| ENV
-    P3 -.-> |using| ENV
-
     ENV --> AWS
     ENV --> HPC
-    ENV --> LOCAL
-    
-
+    ENV --> LOCAL      
 ```
+TODO: describe the boxes
 
-## NSHM AWS services for Hazard
+## Hazard Realizations
 
+```mermaid
+flowchart LR
+    classDef nshm stroke:lightgreen, stroke-width:3px
+    classDef AWS stroke:orange, stroke-width:3px
+
+    RHR[/run hazard realizations/]:::nshm
+    runzi:::nshm
+    oq[openquake]
+    HR[(hazard realizations)]:::AWS
+
+    RHR --> |with| runzi -->|using| oq -->|produces| HR 
 ```
-mermaid
+TODO: describe the boxes
+
+## Hazard Aggregrations
+
+```mermaid
+flowchart LR
+    classDef nshm stroke:lightgreen, stroke-width:3px
+    classDef AWS stroke:orange, stroke-width:3px
+
+    RHA[/run hazard aggregations/]:::nshm
+    thp[toshi-hazard-post]:::nshm
+    HA[(hazard aggregations)]:::AWS
+
+    RHA -->|with| thp -->|produces| HA            
+```
+TODO: describe the boxes
+
+## Hazard Disaggregrations
+
+```mermaid
+flowchart LR
+    classDef nshm stroke:lightgreen, stroke-width:3px
+    classDef AWS stroke:orange, stroke-width:3px
+
+    RHD[/run hazard disaggregations/]:::nshm
+    thp[toshi-hazard-post]:::nshm
+    HD[(hazard disaggregations)]:::AWS
+
+    RHD -->|with| thp -->|produces| HD            
+```
+TODO: describe the boxes
+
+## NSHM Hazard infrastructure WIP
+
+TODO ... 
+
+```mermaid
 graph TD
     classDef nshm stroke:lightgreen, stroke-width:3px
     classDef AWS stroke:orange, stroke-width:3px
@@ -82,8 +93,7 @@ graph TD
 
 ```
 
-```
-mermaid
+```mermaid
 graph LR
     classDef nshm stroke:lightgreen, stroke-width:3px
     classDef AWS stroke:orange, stroke-width:3px
@@ -98,12 +108,11 @@ graph LR
         oq[openquake]
         thp -.->ths
         thp -.-> AWS
-        thp -.-> tapi
-        R -.-> tapi
+        thp -.-> tapi -.-> AWS
+
         
         %% R -.-> thp
-        R-.->|runs| thp -.->|on| AWS
-        R-.->|runs| oq -.->|on| AWS
+        thp -.->|on| AWS
         
         ths -.-> AWS
 
