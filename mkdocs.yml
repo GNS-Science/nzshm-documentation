@@ -6,14 +6,14 @@ repo_name: gns-science/nzshm-documentation
 nav:
   - About: index.md
   - Science Processes:
-      - "": science_process/index.md
+      - science_process/index.md
       - Source models: science_process/source_models.md
       - Hazard: science_process/hazard.md
       - Related: science_process/related.md
       - discussion: science_process/discussion.md
 
   - Systems Architecture:
-      - "": architecture/index.md
+      - architecture/index.md
       - Web API services: architecture/services.md
       - Common Infrastructure: architecture/common_infrastructure.md
       - Data Management Plan:
@@ -27,9 +27,9 @@ nav:
         - Responsibilities and Resources: architecture/data_mgmnt_plan/7_responsibilities_and_resources.md
 
   - Components:
-      - "": components/index.md
+      - components/index.md
       - Kororaa:
-        - "": components/kororaa/index.md
+        - components/kororaa/index.md
         - API deployment: components/kororaa/aws_api_deployment.md
         - APP deployment: components/kororaa/aws_app_deployment.md 
       - nshm-kororaa-api: components/nshm_kororaa_apigw.md
