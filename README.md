@@ -2,7 +2,7 @@
 
 This project is documentation only. It uses poetry to install the necessary components for authoring these. 
 
-A Github Action workflow will publish the output usgin github pages. 
+A Github Action workflow will publish the output to a github pages site. 
 
 ## Documentation guides
 

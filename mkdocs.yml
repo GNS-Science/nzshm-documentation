@@ -8,7 +8,12 @@ nav:
   - Science Processes:
       - science_process/index.md
       - Source models: science_process/source_models.md
-      - Hazard: science_process/hazard.md
+      - Hazard: 
+        - science_process/hazard/index.md
+        - Hazard realisations: science_process/hazard/hazard_realisations.md
+        - Hazard Aggregrations: science_process/hazard/hazard_aggregations.md
+        - Disagg Realisations: science_process/hazard/disagg_realisations.md
+        - Disagg Aggregations: science_process/hazard/disagg_aggregations.md
       - Related: science_process/related.md
       - discussion: science_process/discussion.md
 
@@ -71,6 +76,7 @@ markdown_extensions:
       slugify: !!python/name:pymdownx.slugs.uslugify
   - tables
   - admonition
+  - footnotes  
   - pymdownx.details
 
 #  - meta
@@ -91,7 +97,7 @@ markdown_extensions:
 #   - pymdownx.superfences
 #   - pymdownx.inlinehilite
 #   - pymdownx.details
-#   - admonition  
+ 
 plugins:
   - include-markdown
   - search:

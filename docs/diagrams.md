@@ -39,3 +39,50 @@ B --> C[Server01]
 B --> D[Server02]
 E[Extra blob] -.- D
 ```
+
+## Snippets
+
+
+```mermaid
+graph TD
+    classDef nshm stroke:lightgreen, stroke-width:3px
+    classDef AWS stroke:orange, stroke-width:3px
+    classDef SVC stroke:powderblue, stroke-width:3px
+        
+    batch[[Batch]]:::AWS
+    EC2:::AWS    
+    Fargate:::AWS    
+
+    dynamoDB[(DynamoDB)]:::AWS
+    s3[("Simple Storage S3")]:::AWS
+    ENV{any of}
+    batch --> ENV
+    batch --> Fargate
+
+```
+
+```mermaid
+graph LR
+    classDef nshm stroke:lightgreen, stroke-width:3px
+    classDef AWS stroke:orange, stroke-width:3px
+    classDef SVC stroke:powderblue, stroke-width:3px
+
+    subgraph AWSENV[NSHM AWS environment]
+        ths[toshi-hazard-store]:::nshm
+        thp[toshi-hazard-post]:::nshm
+        
+        tapi[toshi-api]:::nshm
+
+        oq[openquake]
+        thp -.->ths
+        thp -.-> AWS
+        thp -.-> tapi -.-> AWS
+
+        
+        %% R -.-> thp
+        thp -.->|on| AWS
+        
+        ths -.-> AWS
+
+    end  
+```
