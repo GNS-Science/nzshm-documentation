@@ -10,6 +10,8 @@ nav:
       - Source models: science_process/source_models.md
       - Hazard: science_process/hazard.md
       - Related: science_process/related.md
+      - discussion: science_process/discussion.md
+
   - Systems Architecture:
       - "": architecture/index.md
       - Web API services: architecture/services.md
@@ -18,6 +20,10 @@ nav:
       - "": architecture/kororaa/index.md
       - API deployment: architecture/kororaa/aws_api_deployment.md
       - APP deployment: architecture/kororaa/aws_app_deployment.md      
+  - Components:
+      - "": component_index/index.md
+      - nshm-kororaa-api: component_index/nshm_kororaa_apigw.md
+      - solvis-graphql-api: component_index/solvis_graphql_api.md
   - Addendum: 
       - README: readme.md
       - Diagrams: diagrams.md
@@ -40,7 +46,8 @@ theme:
         name: Switch to light mode
   features:
     - navigation.indexes
-  #   - navigation.instant
+    - navigation.instant
+    - navigation.tabs
   #   - navigation.tabs.sticky
 markdown_extensions:
   - pymdownx.superfences:
@@ -52,6 +59,10 @@ markdown_extensions:
       baselevel: 2
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
+  - tables
+  - admonition
+  - pymdownx.details
+
 #  - meta
 # markdown_extensions:
 #   - pymdownx.emoji:
