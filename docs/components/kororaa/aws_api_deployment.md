@@ -12,7 +12,7 @@ _notes on process for PROD Kororaa deployment which may move into the relevant s
 
 ### TEST environment on AWS
 
-The following is setup in [GH nshm-kororaa-api ](./GNS-Science/nshm-kororaa-api)
+The following is setup in [GH nshm-kororaa-api ](https://github.com/GNS-Science/nshm-kororaa-api)
 
 
 ### Deployment 
@@ -63,6 +63,6 @@ graph TD
 
 ## Main components
 
- - [Kororaa application API Gateway](/nzshm-documentation/component_index/nshm_kororaa_apigw/)
+ - [Kororaa application API Gateway](/nzshm-documentation/components/nshm_kororaa_apigw/)
 
- - [solvis-graphql-api](/nzshm-documentation/component_index/solvis_graphql_api)
+ - [solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api)

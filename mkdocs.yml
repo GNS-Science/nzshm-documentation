@@ -16,14 +16,24 @@ nav:
       - "": architecture/index.md
       - Web API services: architecture/services.md
       - Common Infrastructure: architecture/common_infrastructure.md
-  - Kororaa:
-      - "": architecture/kororaa/index.md
-      - API deployment: architecture/kororaa/aws_api_deployment.md
-      - APP deployment: architecture/kororaa/aws_app_deployment.md      
+      - Data Management Plan:
+        -  "": architecture/data_mgmnt_plan/index.md
+        - Data Collection: architecture/data_mgmnt_plan/1_data_collection.md
+        - Documentation and Metadata: architecture/data_mgmnt_plan/2_docs_and_meta.md
+        - Ethics and Legal Compliance: architecture/data_mgmnt_plan/3_ethics_and_legal.md
+        - Storage and Backup: architecture/data_mgmnt_plan/4_storage_and_backup.md
+        - Selection and Preservation: architecture/data_mgmnt_plan/5_selection_and_preservation.md
+        - Data Sharing: architecture/data_mgmnt_plan/6_data_sharing.md
+        - Responsibilities and Resources: architecture/data_mgmnt_plan/7_responsibilities_and_resources.md
+
   - Components:
-      - "": component_index/index.md
-      - nshm-kororaa-api: component_index/nshm_kororaa_apigw.md
-      - solvis-graphql-api: component_index/solvis_graphql_api.md
+      - "": components/index.md
+      - Kororaa:
+        - "": components/kororaa/index.md
+        - API deployment: components/kororaa/aws_api_deployment.md
+        - APP deployment: components/kororaa/aws_app_deployment.md 
+      - nshm-kororaa-api: components/nshm_kororaa_apigw.md
+      - solvis-graphql-api: components/solvis_graphql_api.md
   - Addendum: 
       - README: readme.md
       - Diagrams: diagrams.md
