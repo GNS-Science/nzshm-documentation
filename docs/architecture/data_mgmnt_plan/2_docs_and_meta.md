@@ -11,3 +11,4 @@
 
     Documentation may also include details on the methodology used, analytical and procedural information, definitions of variables, vocabularies, units of measurement, any assumptions made, and the format and file type of the data. Consider how you will capture this information and where it will be recorded. Wherever possible you should identify and use existing community standards.
 
+Documentation of data collection and creation is primarily done through GNS Science Reports available from the NSHM [website](https://nshm.gns.cri.nz/Resources/ScienceReports) and GNS Science Reports [website](https://shop.gns.cri.nz/publications/science-reports/). Software used to create derived products will be documented so that results can be reproduced.
