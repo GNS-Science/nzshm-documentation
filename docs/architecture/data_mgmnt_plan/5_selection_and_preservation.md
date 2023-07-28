@@ -10,6 +10,8 @@
     How long will the data be retained and preserved?
     Consider how the data may be reused e.g. to validate your research findings, conduct new studies, or for teaching. Decide which data to keep and for how long. This could be based on any obligations to retain certain data, the potential reuse value, what is economically viable to keep, and any additional effort required to prepare the data for data sharing and preservation. Remember to consider any additional effort required to prepare the data for sharing and preservation, such as changing file formats.
 
+Some final hazard products can be discarded as they are identified to have been created with flawed methodology.
+
 ### 5.2 What is the long-term preservation plan for the dataset?
 
 ??? note "Questions to consider:"
