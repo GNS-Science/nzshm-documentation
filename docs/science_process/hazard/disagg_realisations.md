@@ -16,7 +16,7 @@ flowchart LR
 
 NSHM SRM LT has 49 parts (ref NSHM)
 
-For each leaf of SRM logic tree, site, poE, IMT, VS30:
+For each component branch of the SRM logic tree, site, poE, IMT, VS30:
 
 **Run a job with**
 
@@ -24,8 +24,7 @@ For each leaf of SRM logic tree, site, poE, IMT, VS30:
  - inversion solution and distributed seismicity rate models (multiple) for the fault systems. i.e. one part of the Source LT)
  - which Hazard Model 
  - Needs Hazard Aggregregation to work out IMTL for requested PoE (352 bytes, via THS query) -> Hazard DB query 
- - gmms
- - GMM Logic Tree
+ - GMCM Logic Tree
  - site config: 1 site, poE
  - user config: 1 IMT, 1 VS30
  - disagg calc config
