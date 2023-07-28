@@ -45,7 +45,9 @@ Each process may be run on several compute environments:
 
  - a [Local Workstation]() eg 16-32 cores, 128 GB RAM, 1TB available disk.
 
-[^1]: HPC environment support is currenltly limited, but is on the CWG work program.
+ See [DiCaprio, et. al. 2024](https://doi.org/xxx/xxx) for a description of the hazard calculation methodology and terminology, some of which is used in these documents.
+
+[^1]: HPC environment support is currently limited, but is on the CWG work program.
 
 
 !!! info
