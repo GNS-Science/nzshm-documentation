@@ -4,18 +4,44 @@ repo_url: https://github.com/gns-science/nzshm-documentation
 repo_name: gns-science/nzshm-documentation
 
 nav:
-  - Introduction: introduction.md
+  - About: index.md
   - Science Processes:
-      - Intro: science_process/intro.md
+      - science_process/index.md
       - Source models: science_process/source_models.md
-      - Hazard: science_process/hazard.md
+      - Hazard: 
+        - science_process/hazard/index.md
+        - Hazard realisations: science_process/hazard/hazard_realisations.md
+        - Hazard Aggregrations: science_process/hazard/hazard_aggregations.md
+        - Disagg Realisations: science_process/hazard/disagg_realisations.md
+        - Disagg Aggregations: science_process/hazard/disagg_aggregations.md
       - Related: science_process/related.md
+      - discussion: science_process/discussion.md
+
   - Systems Architecture:
-      - Intro: architecture/intro.md
-      - Web Services: architecture/services.md
+      - architecture/index.md
+      - Web API services: architecture/services.md
       - Common Infrastructure: architecture/common_infrastructure.md
+      - Data Management Plan:
+        -  "": architecture/data_mgmnt_plan/index.md
+        - Data Collection: architecture/data_mgmnt_plan/1_data_collection.md
+        - Documentation and Metadata: architecture/data_mgmnt_plan/2_docs_and_meta.md
+        - Ethics and Legal Compliance: architecture/data_mgmnt_plan/3_ethics_and_legal.md
+        - Storage and Backup: architecture/data_mgmnt_plan/4_storage_and_backup.md
+        - Selection and Preservation: architecture/data_mgmnt_plan/5_selection_and_preservation.md
+        - Data Sharing: architecture/data_mgmnt_plan/6_data_sharing.md
+        - Responsibilities and Resources: architecture/data_mgmnt_plan/7_responsibilities_and_resources.md
+
+  - Components:
+      - components/index.md
+      - Kororaa:
+        - components/kororaa/index.md
+        - API deployment: components/kororaa/aws_api_deployment.md
+        - APP deployment: components/kororaa/aws_app_deployment.md 
+      - nshm-kororaa-api: components/nshm_kororaa_apigw.md
+      - solvis-graphql-api: components/solvis_graphql_api.md
   - Addendum: 
       - README: readme.md
+      - Diagrams: diagrams.md
 
 theme:
   name: material
@@ -35,7 +61,8 @@ theme:
         name: Switch to light mode
   features:
     - navigation.indexes
-  #   - navigation.instant
+    - navigation.instant
+    - navigation.tabs
   #   - navigation.tabs.sticky
 markdown_extensions:
   - pymdownx.superfences:
@@ -47,6 +74,11 @@ markdown_extensions:
       baselevel: 2
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
+  - tables
+  - admonition
+  - footnotes  
+  - pymdownx.details
+
 #  - meta
 # markdown_extensions:
 #   - pymdownx.emoji:
@@ -65,7 +97,7 @@ markdown_extensions:
 #   - pymdownx.superfences
 #   - pymdownx.inlinehilite
 #   - pymdownx.details
-#   - admonition  
+ 
 plugins:
   - include-markdown
   - search:

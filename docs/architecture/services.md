@@ -36,7 +36,7 @@ NSHM APIs and supporting packages are divided into domains or functional areas, 
  
 ## API Services
 
- - **[nshm-kororaa-apigw](https://github.com/GNS-Science/nshm-kororaa-api)** amalgamates the function-specific apis into an application API Gateway for the NSHM web app (aka Kororaa).
+ - **[nshm-kororaa-apigw](/nzshm-documentation/component_index/nshm_kororaa_apigw/)** amalgamates the function-specific apis into an application API Gateway for the NSHM web app (aka Kororaa).
 
  - **[nshm-toshi-api](https://github.com/GNS-Science/nshm-toshi-api)** provides the catalogue of all NHSM experiments including control metadata and all the input and output artefacts. Objects are uniquely identified and accessible across the higher-order services.
 
