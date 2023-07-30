@@ -20,3 +20,5 @@ Some final hazard products can be discarded as they are identified to have been 
     What costs if any will your selected data repository or archive charge?
     Have you budgeted for time and effort to prepare the data for sharing / preservation?
     Consider how datasets that have long-term value will be preserved and curated beyond the lifetime of the grant. Also outline the plans for preparing and documenting data for sharing and archiving. If you do not propose to use an established repository, the data management plan should demonstrate that resources and systems will be in place to enable the data to be curated effectively beyond the lifetime of the grant.
+
+Once it is determined that the data are not needed on a regular basis for the project, they can be put into "cold storage" backups which is a low cost solution to long term preservation. Data can be retrieved at a later date, if necessary, with a time delay.

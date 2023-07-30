@@ -10,7 +10,7 @@
     Will data ownership and responsibilities for research data management be part of any consortium agreement or contract agreed between partners?
     Outline the roles and responsibilities for all activities e.g. data capture, metadata production, data quality, storage and backup, data archiving and data sharing. Consider who will be responsible for ensuring relevant policies will be respected. Individuals should be named where possible.
 
-Project lead and Computational Working Group.
+The Computational Working Group of the NZ NSHM project will be responsible for data management.
 
 ### 7.2 What resources will you require to deliver your plan?
 
@@ -21,4 +21,4 @@ Project lead and Computational Working Group.
     Will charges be applied by data repositories?
     Carefully consider any resources needed to deliver the plan, e.g. software, hardware, technical expertise, etc. Where dedicated resources are needed, these should be outlined and justified.
 
-Time and money.
+Costs for storing and maintaining backups of data in using cloud services is expected to cost over $10,000 NZD per year. We will need to retain expertise in cloud computing, IT security best practices, and IT Architecture to build and maintain our data management system.
