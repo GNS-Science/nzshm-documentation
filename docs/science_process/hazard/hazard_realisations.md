@@ -13,16 +13,15 @@ flowchart LR
     RHR --> |with| runzi -->|using| oq -->|produces| HR 
 ```
 
-NSHM SRM LT has 49 parts (ref NSHM)
+NSHM Seismicity Rate Model Logic Tree (SRM LT) has 49 parts (ref NSHM)
 
-For each leaf of the source rate model logic tree:
+For each component branch of the source rate model logic tree:
 
 **Run a job with**
 
 ### inputs:
- - inversion solution and distributed seismicity rate models (multiple) for the fault systems. i.e. one part of the Source LT)
- - gmms
- - GMM Logic Tree
+ - inversion solution and distributed seismicity rate models (multiple) for the fault systems (i.e. one part of the SRM LT).
+ - GMCM Logic Tree
  - site specifications config
  - user configs IMTS, etc
  - calculation configs
@@ -36,5 +35,5 @@ For each leaf of the source rate model logic tree:
 ### resource/cost/metrics:
  
  - 49 * 300MB of realisations for NSHM model => 15GB
- - Currently ~24 hours for 4k sites, all NSHM periods. AWS M5 instance 8 CPU.
+ - Currently ~24 hours for 4k sites, all NSHM periods. For the largest component branch of the SRM LT (typically crustal sources). AWS M5 instance 8 CPU.
 
