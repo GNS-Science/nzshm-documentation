@@ -16,21 +16,7 @@ This section will cover:
 
  - Compute Abstraction
 
- - for Tech Reference section
+ - USGS:Opensha
 
-   - Python project guidelines
-
-     - Testing, Coverage and Linting
-
-     - Integration & Deployment
-
-   - React UI projects guidelines
-
-     - Testing, Coverage and Linting
-
-     - Integration & Deployment
-
-   - USGS:Opensha
-
-   - GEM:Openquake  
+ - GEM:Openquake  
 
