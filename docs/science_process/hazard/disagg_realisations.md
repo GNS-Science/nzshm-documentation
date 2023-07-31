@@ -32,6 +32,7 @@ For each component branch of the SRM logic tree, site, poE, IMT, VS30:
 ### outputs:
   - one HDF5 file, size (TBA): 1 site, poE, IMT, VS30  => 680kB
   - CSV files: 80kB
+  - JSON index of disagg realisations produced
   
 ### resource/cost/metrics:
 

@@ -1,4 +1,4 @@
-## 3 Ethics and Legal Compliance (0 / 2)
+## 3 Ethics and Legal Compliance
 
 ### 3.1 How will you manage any ethical issues?
 

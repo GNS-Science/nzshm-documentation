@@ -4,16 +4,34 @@ A stitched graphql API for Kororaa, which amalgamates the function-specific apis
 
 - [on github](https://github.com/GNS-Science/nshm-kororaa-api)
 
+For more info, please see the [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) page.
+
 ## Deployments
+
+Deployment environments AWS_TEST and AWS_PROD each define the following variables:
+
+```
+NZSHM22_KORORAA_API_KEY
+NZSHM22_KORORAA_API_URL
+NZSHM22_SOLVIS_API_KEY
+NZSHM22_SOLVIS_API_URL
+NZSHM22_TOSHI_API_KEY
+NZSHM22_TOSHI_API_URL
+```
 
 ### lambda function
 
+-----
+### TEST
+-----
+
 | AWS lambda function name                                    | Github Environment | Branch       |
 | ----------------------------------------------------------- | ------------------ | ------------ | 
-| nzshm22-solvis-graphql-api-test-app                         | TEST               | deploy-test  | 
-| nzshm22-solvis-graphql-api-test-warmup-plugin-littleWarmer  | TEST               | deploy-test  | 
+| nzshm22-XXX-test-app                         |                | deploy-test  | 
+| nzshm22-XXX-test-warmup-plugin-littleWarmer  |                | deploy-test  | 
 
-### API gateway
+
+### API gateway configuration
 | AWS  (API gateway)                     | Github Environment | Branch       |
 | -------------------------------------- | ------------------ | ------------ | 
 | test-nshm-kororaa-apigw (4ra58fifn3)   | AWS_TEST           | deploy-test  | 

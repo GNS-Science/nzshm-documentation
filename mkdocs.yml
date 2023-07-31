@@ -20,6 +20,7 @@ nav:
   - Systems Architecture:
       - architecture/index.md
       - Web API services: architecture/services.md
+      - API Gateway pattern: architecture/api_gateway_pattern.md
       - Common Infrastructure: architecture/common_infrastructure.md
       - Data Management Plan:
         -  "": architecture/data_mgmnt_plan/index.md
@@ -30,6 +31,10 @@ nav:
         - Selection and Preservation: architecture/data_mgmnt_plan/5_selection_and_preservation.md
         - Data Sharing: architecture/data_mgmnt_plan/6_data_sharing.md
         - Responsibilities and Resources: architecture/data_mgmnt_plan/7_responsibilities_and_resources.md
+
+  - Technical Guidelines:
+      - guidelines/index.md
+      - API Service Deployments: guidelines/service_deployment_guide.md
 
   - Components:
       - components/index.md

@@ -22,7 +22,7 @@ flowchart LR
 ### outputs:
  - entire LT structure in json (200kb)
  - caches composite realizatons to disk (many GB)
- - produces aggregate hazard curves in THS DynamoDB (4K site, 20 periods, 44 IMTS, => 280MB per VS30)
+ - produces aggregate hazard curves in **THS DynamoDB** (4K site, 20 periods, 44 IMTS, => 280MB per VS30)
 
 ### resource/cost/metrics:
  - runs locally or in AWS EC2 M5
