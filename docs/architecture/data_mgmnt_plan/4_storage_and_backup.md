@@ -24,4 +24,4 @@ Storage of data products will be provided by cloud-based object and database sto
 
 Access to cloud storage services is controlled by accounts using multi-factor-authentication. The top-level account is controlled by GNS Science IT group and administrative access given to a small number of NSHM team members.
 
-Access to data is controlled several APIs developed for the project which use secret keys to specify level of access to data (read/write or read only).
+Access to data is controlled via several APIs developed for the project which use secret keys to specify level of access to data (e.g., read/write or read only).
