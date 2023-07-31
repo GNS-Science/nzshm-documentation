@@ -19,6 +19,7 @@ mkdocs-pymdownx-material-extras = "^2.4.3"
 
 #mkdocstrings= "@latest"
 #mkdocstrings-python= "@latest"
+mkdocs-with-pdf = "^0.9.3"
 
 
 [build-system]

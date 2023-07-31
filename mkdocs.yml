@@ -23,7 +23,7 @@ nav:
       - API Gateway pattern: architecture/api_gateway_pattern.md
       - Common Infrastructure: architecture/common_infrastructure.md
       - Data Management Plan:
-        -  "": architecture/data_mgmnt_plan/index.md
+        - architecture/data_mgmnt_plan/index.md
         - Data Collection: architecture/data_mgmnt_plan/1_data_collection.md
         - Documentation and Metadata: architecture/data_mgmnt_plan/2_docs_and_meta.md
         - Ethics and Legal Compliance: architecture/data_mgmnt_plan/3_ethics_and_legal.md
