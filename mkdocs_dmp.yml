@@ -1,0 +1,90 @@
+site_name: NZSHM Data Management Plan
+# site_url: https://gns-science.github.io/nzshm-documentation
+# repo_url: https://github.com/gns-science/nzshm-documentation
+# repo_name: gns-science/nzshm-documentation
+
+nav:
+  - Introduction: architecture/data_mgmnt_plan/index.md
+  - Data Collection: architecture/data_mgmnt_plan/1_data_collection.md
+  - Documentation and Metadata: architecture/data_mgmnt_plan/2_docs_and_meta.md
+  - Ethics and Legal Compliance: architecture/data_mgmnt_plan/3_ethics_and_legal.md
+  - Storage and Backup: architecture/data_mgmnt_plan/4_storage_and_backup.md
+  - Selection and Preservation: architecture/data_mgmnt_plan/5_selection_and_preservation.md
+  - Data Sharing: architecture/data_mgmnt_plan/6_data_sharing.md
+  - Responsibilities and Resources: architecture/data_mgmnt_plan/7_responsibilities_and_resources.md
+
+theme:
+  name: material
+  language: en
+  #logo: assets/logo.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.indexes
+    - navigation.instant
+    # - navigation.tabs
+  #   - navigation.tabs.sticky
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      baselevel: 2
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - tables
+  - admonition
+  - footnotes  
+  - pymdownx.details
+
+#  - meta
+# markdown_extensions:
+#   - pymdownx.emoji:
+#       emoji_index: !!python/name:materialx.emoji.twemoji
+#       emoji_generator: !!python/name:materialx.emoji.to_svg
+#   - pymdownx.critic
+#   - pymdownx.caret
+#   - pymdownx.mark
+#   - pymdownx.tilde
+#   - pymdownx.tabbed
+#   - attr_list
+#   - pymdownx.arithmatex:
+#       generic: true
+#   - pymdownx.highlight:
+#       linenums: false
+#   - pymdownx.superfences
+#   - pymdownx.inlinehilite
+#   - pymdownx.details
+ 
+plugins:
+  - include-markdown
+  - with-pdf:
+      author: " "
+      cover_subtitle: " "
+      copyright: " "
+      ordered_chapter_level: 0
+      output_path: pdf/NZHSM_DMP.pdf
+  - search:
+      lang: en
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gns-science/nzshm-documentation
+      name: Github
+    - icon: material/email
+      link: "mailto:nshm@gns.cri.nz"
+#google_analytics:
+  #- UA-xxx
+  #- auto

@@ -23,6 +23,14 @@ This will create a server running on http://locahost:8000 by default. Changes ma
 
 Use regular git commits PRs etc to manage the review process with your co-authors.
 
+## DMP pdf
+To get a pdf of the Data Management Plan (DMP):
+```
+poetry run mkdocs -f mkdocs_dmp.yml
+```
+A pdf file will be created in the directory hosting the website at `pdf/NZHSM_DMP.pdf`
+
+
 ### Editor setup
 
 For VSCode recommend installing the extension `Markdown Preview Mermaid Support` which gives a close approximation of mkdocs formatting. 
