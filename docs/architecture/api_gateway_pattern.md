@@ -34,61 +34,16 @@ graph TD
 
 The NSHM service APIs are all using [graphql standard](https://graphql.org/). This means that the API gateway can also provide [schema stitching](https://the-guild.dev/graphql/stitching/docs) to improve flexibilty and efficiencies that benefit the client application.
 
-In the Kororaa APP API Gateway example shown above we have a web application client which communicates with a single API Gateway endpoint. This APIGW in turn communicates with whichever domain API services are required to service the application functions.
+In the Kororaa APP API Gateway example shown above we have a web application client which communicates with a single API Gateway endpoint via the DNS hostname/path **nshm-test.gns.cri.nz/kororaa-app-api**. This API gateway simply directs request bys their path to the associated lambda function i.e **nshm-kororaa-apigw-test-app**. This lambda function runs a lightweight node express application that stitches and proxies to the required  microservices.
 
- - [Kororaa application API Gateway](/nzshm-documentation/components/nshm_kororaa_apigw/)
+Also shown as examples in the diagram above we have:
 
- - [solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api)
+ - [Kororaa application API Gateway](/nzshm-documentation/components/nshm_kororaa_apigw/) which is the stitching app gateway for Koroaa.
 
+ - [kororaa-graphql-api](/nzshm-documentation/components/kororaa_graphql_api) is an API microservice that deals with kororaa app specific functions e.g help text, science publications, model release history. 
 
-## Combined model
+ - [solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api) is an API microservice that deals with solvis functions. 
 
+ - [nshm-toshi-api](/nzshm-documentation/components/nshm_toshi_api) is an API microservice for tracking experimental processes and artefacts (inputs and outputs). 
 
-```mermaid
-graph TD
-    classDef nshm stroke:lightgreen, stroke-width:3px
-    classDef AWS stroke:orange, stroke-width:3px
-    classDef SVC stroke:powderblue, stroke-width:3px
-    classDef note stroke:black, stroke-width:1px
-    
-    K["Kororaa web app
-    nshm-test.gns.cri.nz"]:::nshm
-    NB["https://nshm-api-test.gns.cri.nz/kororaa-app-api/graphql"]:::note 
-
-
-    T["Tui web app
-        tui-test.gns.cri.nz"]:::nshm
-    NB2["https://nshm-api-test.gns.cri.nz/tui-app-api/graphql"]:::note 
-
-
-    K -.-|graphql query| NB -.-> A
-    T -.-|graphql query| NB2 -.-> B
-
-    subgraph GW["API Gateway layer"]
-        A["kororaa API Gateway:
-        test-nshm-kororaa-apigw (4ra58fifn3)"]:::AWS
-        F["lambda:
-        nshm-kororaa-apigw-test-app"]:::AWS
-
-        B["Tui API Gateway:
-        test-nshm-tui-apigw ()"]:::AWS
-        F2["lambda:
-        nshm-tui-apigw-test-app"]:::AWS
-
-        A -->|path: kororaa-app-api/graphql| F 
-        B -->|path: tui-app-api/graphql| F2 
-
-    end
-
-    subgraph SUP["graphql microservices layer"]
-        %% direction LR
-
-        K-API[kororaa-graphql-api]:::nshm
-        S-API[solvis-graphql-api]:::nshm
-        T-API[nshm-toshi-api]:::nshm               
-    end
-    
-    F -.-> SUP
-    F2 -.-> SUP
-
-```
+ For more specific configurations please see **[API gateway deployments](./api_gateway_deployments)**.
