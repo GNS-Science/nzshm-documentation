@@ -44,6 +44,8 @@ NSHM APIs and supporting packages are divided into domains or functional areas, 
  
  - **[solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api/)** provides analytical services to help explore and analyse key components of the NSHM source rate model.
 
+ For more general information please look at the **[API gateway pattern](./api_gateway_pattern)** and **[API gateway deployments](./api_gateway_deployments)** pages.
+
 ## NSHM support libraries
  
   - **[toshi-hazard-store](https://github.com/GNS-Science/toshi-hazard-store)** stores the hazard results of the formally published NSHM model for gridded (10km), and the towns and cities of NZ.

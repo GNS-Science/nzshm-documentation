@@ -21,6 +21,7 @@ nav:
       - architecture/index.md
       - Web API services: architecture/services.md
       - API Gateway pattern: architecture/api_gateway_pattern.md
+      - API Gateway deployments: architecture/api_gateway_deployments.md
       - Common Infrastructure: architecture/common_infrastructure.md
       - Data Management Plan:
         - architecture/data_mgmnt_plan/index.md

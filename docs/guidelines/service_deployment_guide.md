@@ -5,12 +5,12 @@
 For a typical service, two API service environments are available:
 
  - **PROD** (short for production) is the live, public facing product. 
-   In deployment repositories,  the `main` (occasionally `master`) commit branch represents the currentyy live state.
+   In deployment repositories,  the `main` (occasionally `master`) commit branch represents the currently live state.
 
- - **TEST** is used for verifying new featres prior to publice release.
-   In deployment repositories,  the `deploy-test` commit branch represents the currenty live state.
+ - **TEST** is used for verifying new features prior to publice release.
+   In deployment repositories,  the `deploy-test` commit branch represents the currently live state.
 
-Occasionally an additional **DEV** (for development) service environment may be deployed. These are usually discarded as soon as possible to minimise costs and clutter.
+Occasionally an additional **DEV** (for development) service environment may be deployed. These are usually discarded as soon as possible to minimise cost and clutter.
 
 ### Automated deployments
 
