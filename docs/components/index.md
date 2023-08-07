@@ -23,7 +23,7 @@ this is a list of all the NSHM project components managed by Computational Worki
 | kororaa-graphql-api | kororaa-graphql-api | nzshm22-kororaa-api-prod-app | https://29zzl5pqb0.execute-api.ap-southeast-2.amazonaws.com/prod/graphql | prod-nzshm22-kororaa-api | kororaa-functions |
 
 
-### PROD (INCOMING))
+### PROD (INCOMING)
 
 | repo: GNS-Science/ | local_folder | lambda | endpoint | APIGW | Desc |
 | -------------- | ------------ | ------ | -------- | ------| ---- |

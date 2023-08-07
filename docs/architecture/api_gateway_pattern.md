@@ -15,7 +15,7 @@ graph TD
         A["API Gateway:
         test-nshm-kororaa-apigw (4ra58fifn3)"]:::AWS
         F["lambda:
-        nshm-kororaa-apigw-test-app"]:::AWS
+        nshm-kororaa-apigw-test-app"]:::nshm
     end
 
     subgraph SUP["graphql microservices layer"]
@@ -34,7 +34,7 @@ graph TD
 
 The NSHM service APIs are all using [graphql standard](https://graphql.org/). This means that the API gateway can also provide [schema stitching](https://the-guild.dev/graphql/stitching/docs) to improve flexibilty and efficiencies that benefit the client application.
 
-In the Kororaa APP API Gateway example shown above we have a web application client which communicates with a single API Gateway endpoint via the DNS hostname/path **nshm-test.gns.cri.nz/kororaa-app-api**. This API gateway simply directs request bys their path to the associated lambda function i.e **nshm-kororaa-apigw-test-app**. This lambda function runs a lightweight node express application that stitches and proxies to the required  microservices.
+In the Kororaa APP API Gateway example shown above we have a web application client which communicates with a single API Gateway endpoint via the DNS hostname/path **nshm-test.gns.cri.nz/kororaa-app-api**. This API gateway simply directs request by path to the associated lambda function i.e **nshm-kororaa-apigw-test-app**. This lambda function runs a lightweight node express application that stitches and proxies to the required  microservices.
 
 Also shown as examples in the diagram above we have:
 
@@ -46,4 +46,4 @@ Also shown as examples in the diagram above we have:
 
  - [nshm-toshi-api](/nzshm-documentation/components/nshm_toshi_api) is an API microservice for tracking experimental processes and artefacts (inputs and outputs). 
 
- For more specific configurations please see **[API gateway deployments](./api_gateway_deployments)**.
+ For more specific configurations please see **[API gateway deployments](../api_gateway_deployments)**.

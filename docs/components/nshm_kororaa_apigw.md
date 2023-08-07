@@ -59,14 +59,16 @@ Serverless Domain Manager:
 
 ```
 
+#### DNS and SSL manual configuration
 
-#### deployment manual configuration
+There are a few manual steps to complete because DNS hosting for GNS is handled in-house. The public facing api URL `nshm-api-test.gns.cri.nz` is run by the AWS API Gateway service layer. This requires an SSL certificate, which must be validated by GNS DNS. The setup steps are:
 
-There are a few manula steps to complete because DNS hosting for GNS is handled in-house. The public facing api URl `nshm-api-test.gns.cri.nz` is run by the AWS API Gateway service layer. This requires an SSL certificate, which must be validated by GNS DNS. The setup steps are:
-
-  - use AWS Console/Certificate Manager to create sn SSL certificaate request e.g. for `nshm-api-test.gns.cri.nz`. 
+  - use **AWS Console/Certificate Manager** to create an SSL certificate request e.g. for `nshm-api-test.gns.cri.nz`. 
   
-  - pass the CNAME details ot itsupport and ask them to setup the SSL CNAME validation entry.
+  - pass the CNAME details to IT support and ask them to setup the SSL CNAME validation entry.
 
   - run `sls create_domain --stage test` which will configure the new API gateway mapping for the lambda
 
+  - using **AWS Console/API Gateway/Custom domain names** to get the cloudfront address that the gateway is mapped to (e.g. `d1g45pget0a502.cloudfront.net`). Ask IT support to add a new CNAME entry mapping the GNS DNS name to `.cloudfront.net`.
+
+Note these manual steps are needed only once for each domain host. Additonal mappings may now be added freely.

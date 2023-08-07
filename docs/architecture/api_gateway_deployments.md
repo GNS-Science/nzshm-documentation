@@ -28,12 +28,12 @@ graph TD
         A["kororaa API Gateway:
         test-nshm-kororaa-apigw (4ra58fifn3)"]:::AWS
         F0["lambda:
-        nshm-kororaa-apigw-test-app"]:::AWS
+        nshm-kororaa-apigw-test-app"]:::nshm
 
         C["Weka API Gateway:
         test-nshm-weka-apigw ()"]:::AWS
         F2["lambda:
-        nshm-weka-apigw-test-app"]:::AWS
+        nshm-weka-apigw-test-app"]:::nshm
 
         A -->|path: kororaa-app-api/graphql| F0 
         C -->|path: kororaa-app-api/graphql| F2
