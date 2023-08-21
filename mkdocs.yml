@@ -36,6 +36,7 @@ nav:
   - Technical Guidelines:
       - guidelines/index.md
       - API Service Deployments: guidelines/service_deployment_guide.md
+      - React UI Project Guide: guidelines/react_project_guide.md
 
   - Components:
       - components/index.md
