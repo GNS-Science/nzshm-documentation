@@ -2,9 +2,40 @@
 
 A stitched graphql API for Kororaa, which amalgamates the function-specific apis into an application API Gateway for the NSHM web app (aka Kororaa).
 
-- [on github](https://github.com/GNS-Science/nshm-kororaa-api)
+- on **Github:** [GNS-Science/nshm-kororaa-apigw](https://github.com/GNS-Science/nshm-kororaa-apigw)
 
-For more info, please see the [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) page.
+For an overview, please see the [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) page.
+
+```mermaid
+graph TD
+    classDef nshm stroke:lightgreen, stroke-width:3px
+    classDef AWS stroke:orange, stroke-width:3px
+    classDef SVC stroke:powderblue, stroke-width:3px
+    classDef note stroke:black, stroke-width:1px
+    
+    K["Kororaa web app
+    nshm-test.gns.cri.nz"]:::nshm
+    NB["https://nshm-api-test.gns.cri.nz/kororaa-app-api/graphql"]:::note 
+    subgraph GW["API Gateway layer"]
+        A["API Gateway:
+        test-nshm-kororaa-apigw (4ra58fifn3)"]:::AWS
+        F["lambda:
+        nshm-kororaa-apigw-test-app"]:::nshm
+    end
+
+    subgraph SUP["graphql microservices layer"]
+        direction LR
+
+        K-API[kororaa-graphql-api]:::nshm
+        S-API[solvis-graphql-api]:::nshm
+        T-API[nshm-toshi-api]:::nshm               
+    end
+    K -.-|graphql query| NB -.-> A -->|path: kororaa-app-api/graphql| F 
+    F --> S-API
+    F --> K-API
+    F --> T-API 
+
+```
 
 ## Deployments
 
@@ -19,24 +50,22 @@ NZSHM22_TOSHI_API_KEY
 NZSHM22_TOSHI_API_URL
 ```
 
-### lambda function
-
 -----
 ### TEST
 -----
 
-| AWS lambda function name                                    | Github Environment | Branch       |
-| ----------------------------------------------------------- | ------------------ | ------------ | 
-| nshm-kororaa-apigw-test-app                          |                | deploy-test  | 
-| nshm-kororaa-apigw-test-warmup-plugin-littleWarmer  |                | deploy-test  | 
-
-
-### API gateway configuration
+#### API gateway configuration
 | AWS  (API gateway)                     | Github Environment | Branch       |
 | -------------------------------------- | ------------------ | ------------ | 
-| test-nshm-kororaa-apigw (4ra58fifn3)   | AWS_TEST           | deploy-test  | 
+| test-nshm-kororaa-apigw (4ra58fifn3)   |          | deploy-test  | 
 
+#### Lambda
+| AWS lambda function name                                    | Github Environment | Branch       |
+| ----------------------------------------------------------- | ------------------ | ------------ | 
+| nshm-kororaa-apigw-test-app                          | AWS_TEST  | deploy-test  | 
+| nshm-kororaa-apigw-test-warmup-plugin-littleWarmer   | AWS_TEST  | deploy-test  | 
 
+#### Serverless log from GHA deploy script
 ```
 Deploying nshm-kororaa-apigw to stage test (ap-southeast-2)
 WarmUp: Creating warmer "littleWarmer" to warm up 1 function
@@ -56,8 +85,47 @@ Serverless Domain Manager:
   Domain Name: nshm-api-test.gns.cri.nz
   Target Domain: d1g45pget0a502.cloudfront.net
   Hosted Zone Id: Z2FDTNDATAQYW2
-
 ```
+
+-----
+### PROD
+-----
+
+#### API gateway configuration
+| AWS  (API gateway)                     | Github Environment | Branch       |
+| -------------------------------------- | ------------------ | ------------ | 
+| prod-nshm-kororaa-apigw (8wq8w9xika)   |                    | main  | 
+
+#### Lambda
+| AWS lambda function name                                    | Github Environment | Branch       |
+| ----------------------------------------------------------- | ------------------ | ------------ | 
+| nshm-kororaa-apigw-prod-app                                 | AWS_PROD           | main         | 
+| nshm-kororaa-apigw-prod-warmup-plugin-littleWarmer          | AWS_PROD           | main         | 
+
+
+#### Serverless log from GHA deploy script
+```
+Deploying nshm-kororaa-apigw to stage prod (ap-southeast-2)
+WarmUp: Creating warmer "littleWarmer" to warm up 1 function
+
+✔ Service deployed to stack nshm-kororaa-apigw-prod (70s)
+
+api keys:
+  KORORAA_APIGW_TempApiKey-prod: YZ***Uc - Api key until we have an auth function
+endpoints:
+  OPTIONS - https://8wq8w9xika.execute-api.ap-southeast-2.amazonaws.com/prod/{any+}
+  POST - https://8wq8w9xika.execute-api.ap-southeast-2.amazonaws.com/prod/{any+}
+  GET - https://8wq8w9xika.execute-api.ap-southeast-2.amazonaws.com/prod/{any+}
+functions:
+  app: nshm-kororaa-apigw-prod-app (11 MB)
+  warmUpPluginLittleWarmer: nshm-kororaa-apigw-prod-warmup-plugin-littleWarmer (1.2 kB)
+Serverless Domain Manager:
+  Domain Name: nshm-api.gns.cri.nz
+  Target Domain: d1104f096p2yb2.cloudfront.net
+  Hosted Zone Id: Z2FDTNDATAQYW2
+```
+
+
 
 #### DNS and SSL manual configuration
 
@@ -67,7 +135,7 @@ There are a few manual steps to complete because DNS hosting for GNS is handled 
   
   - pass the CNAME details to IT support and ask them to setup the SSL CNAME validation entry.
 
-  - run `sls create_domain --stage test` which will configure the new API gateway mapping for the lambda
+  - run `sls create_domain --stage test` which will configure the new API gateway mapping for the lambda OR do this manually
 
   - using **AWS Console/API Gateway/Custom domain names** to get the cloudfront address that the gateway is mapped to (e.g. `d1g45pget0a502.cloudfront.net`). Ask IT support to add a new CNAME entry mapping the GNS DNS name to `.cloudfront.net`.
 
