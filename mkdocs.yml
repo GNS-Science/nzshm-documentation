@@ -40,11 +40,12 @@ nav:
 
   - Components:
       - components/index.md
-      - Kororaa:
-        - components/kororaa/index.md
-        - API deployment: components/kororaa/aws_api_deployment.md
-        - APP deployment: components/kororaa/aws_app_deployment.md 
-      - nshm-kororaa-api: components/nshm_kororaa_apigw.md
+      # - Kororaa:
+      #  - components/kororaa/index.md
+      #  - API deployment: components/kororaa/aws_api_deployment.md
+      #  - APP deployment: components/kororaa/aws_app_deployment.md 
+      - nshm-kororaa-apigw: components/nshm_kororaa_apigw.md
+      - nshm-weka-apigw: components/nshm_weka_apigw.md
       - solvis-graphql-api: components/solvis_graphql_api.md
   - Addendum: 
       - README: readme.md
