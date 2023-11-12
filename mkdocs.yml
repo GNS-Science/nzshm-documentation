@@ -5,6 +5,10 @@ repo_name: gns-science/nzshm-documentation
 
 nav:
   - About: index.md
+
+  - Domain Model:
+      - domain_model/index.md 
+
   - Science Processes:
       - science_process/index.md
       - Source models: science_process/source_models.md
