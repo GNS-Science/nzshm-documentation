@@ -1,74 +1,14 @@
 # NZSHM-Model relationships
 
-## nzshm-model etc
-
-```mermaid
-
-classDiagram
-    
-    class Model["SeismicHazardModel"] {
-        string version
-        string notes        
-        date created
-    }
-
-    class SLT["SourceLogicTree"] {
-        string version
-        string notes
-    }
-
-    class SLTG["SourceLogicTreeGroup"] {
-        string group e.g `Hik, Puy`
-        string tectonic_region e.g. `Slab, Crustal`
-    }
-
-    class SLTB["SourceLogicTreeBranch"] {
-        float weight
-        string tag e.g. `Hik TL, N16.5, b0.95, C4, s0.42`
-    }
-
-    class SLTF["SourceLogicTreeSource"] {
-        string source_id
-        string tag e.g. `Hik TL, N16.5, b0.95, C4, s0.42, IFM`
-    }
-
-    class GMM_LT["GroundMotionModelLogicTree"] {
-        string version
-        string notes
-    }   
-
-    class GMM_LTB["GroundMotionModelLogicTreeBranch"] {
-        float weight
-        string args
-        string tag e.g. BSSA-2014
-    }
-
-    class GMPE["GroundMotionPredictionEquation"] {
-        string name e.g. Stirling 2015
-        string[] tectonic_regions e.g. [`Slab, Crustal`]
-        string repository/class
-    }
-
-    Model "0..*" -- "1" SLT
-    Model "0..*" -- "1" GMM_LT
-    SLT *-- "1..*" SLTG
-    SLTG *-- "1..*" SLTB
-
-    SLTB "0..*" -- "1..*" SLTF
-    GMM_LT *-- "1..*" GMM_LTB 
-    GMM_LTB "0..*" --"1" GMPE
-```
+This is parked, it contains some developmental diagrams used to infotm the wider class modelling.
 
 ## Toshi Hazard objects (Task + Solution + Config)
 
-[see here](./toshi_schema)
-
 ```mermaid
-
 classDiagram
     
     %% direction LR
-    class OHS["Openquake Hazard Solution"] {
+    class OpenquakeHazardSolution {
         <<Node>>
         String id: 
         String produced_by:
@@ -79,7 +19,7 @@ classDiagram
         
     }
 
-    class OHT["Openquake Hazard Task"] {
+    class OpenquakeHazardTask {
         <<Node>>
         String id: 
         node hazard_solution
@@ -93,43 +33,41 @@ classDiagram
         source_models
     }
     
-    class OHC["OpenquakeHazardConfig"] {
+    class OpenquakeHazardConfig {
         <<Node>>
         Node[] source_models 
         template_archive
     }
 
-    OHT "*" -- "1" OHC
-    OHT "1" -- "0..1" OHS
+    OpenquakeHazardTask "*" -- "1" OpenquakeHazardConfig
+    OpenquakeHazardTask "1" -- "0..1" OpenquakeHazardSolution
 
-    note for OHS "T3BlbnF1YWtlSGF6YXJkU29sdXRpb246NjUzNjk0MQ=="
-    note for OHT "T3BlbnF1YWtlSGF6YXJkVGFzazo2NTM2ODgx"
+    note for OpenquakeHazardSolution "T3BlbnF1YWtlSGF6YXJkU29sdXRpb246NjUzNjk0MQ=="
+    note for OpenquakeHazardTask "T3BlbnF1YWtlSGF6YXJkVGFzazo2NTM2ODgx"
     
 ```
 
 ## OQ hazard processing
 
 ```mermaid
-
 classDiagram
     
     direction TB
 
-    class SLTC["SourceLogicTreeBranch"]   
-    class GMCM_LTB["GroundMotionLogicTreeBranch"]
+    class SourceLogicTreeBranch
+    class GroundMotionLogicTreeBranch
 
-    class OHT["Openquake Hazard Solution"] {
+    class OpenquakeHazardSolution {
         vs30
     }
 
-    
-    class THS_meta["THS_OpenquakeMeta-PROD"] {
+    class THS_OpenquakeMeta {
         <<DynamoDB Row>>
         String toshi_hazard_solution_id
         etc
     }
 
-    class THS["THS_OpenquakeRealization-PROD"] {
+    class THS_OpenquakeRealization {
         <<DynamoDB Row>>
         toshi_hazard_solution_id
         location_code
@@ -138,7 +76,7 @@ classDiagram
         hazard_curves
     }
 
-    class RLZ["Realization"] {
+    class Realization {
         Integer id
         string[] imts
         float[] poes
@@ -146,13 +84,13 @@ classDiagram
 
 
  
-    OHT -- THS_meta
-    OHT *-- RLZ
+    THS_OpenquakeRealization -- THS_OpenquakeMeta
+    THS_OpenquakeRealization *-- Realization
 
-    RLZ "1" -- "1..*" THS
+    Realization "1" -- "1..*" OpenquakeHazardSolution
 
-    SLTC -- RLZ
-    GMCM_LTB -- RLZ
+    SourceLogicTreeBranch -- Realization
+    GroundMotionLogicTreeBranch -- Realization
 
 
 ```
