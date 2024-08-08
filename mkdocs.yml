@@ -13,6 +13,7 @@ nav:
 
   - Science Processes:
       - science_process/index.md
+      - Process maps: science_process/process_maps.md
       - Source models: science_process/source_models.md
       - Hazard: 
         - science_process/hazard/index.md
