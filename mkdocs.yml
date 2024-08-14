@@ -47,6 +47,10 @@ nav:
       - nshm-kororaa-apigw: components/nshm_kororaa_apigw.md
       - nshm-weka-apigw: components/nshm_weka_apigw.md
       - solvis-graphql-api: components/solvis_graphql_api.md
+
+  - Reports and Presentations:
+      - reports_and_presentations/index.md
+
   - Addendum: 
       - README: readme.md
       - Diagrams: diagrams.md
