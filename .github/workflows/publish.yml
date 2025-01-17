@@ -62,7 +62,7 @@ jobs:
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
-          poetry install
+          poetry install --no-root
 
       - name: Build documentation
         run: |
