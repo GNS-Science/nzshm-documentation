@@ -5,8 +5,15 @@ repo_name: gns-science/nzshm-documentation
 
 nav:
   - About: index.md
+
+  - Domain Model:
+      - domain_model/index.md
+      - Seismic Hazard Model:  domain_model/seismic_hazard_model.md
+      - Hazard Realisation: domain_model/hazard_realisation_model.md
+
   - Science Processes:
       - science_process/index.md
+      - Process maps: science_process/process_maps.md
       - Source models: science_process/source_models.md
       - Hazard: 
         - science_process/hazard/index.md
