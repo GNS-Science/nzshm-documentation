@@ -2,46 +2,15 @@
 
 A stitched graphql API for the NSHM Weka web app (aka Weka).
 
-- on **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-weka-apigw)
-
-For an overview, please see the [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) page.
-
-
-```mermaid
-graph TD
-    classDef nshm stroke:lightgreen, stroke-width:3px
-    classDef AWS stroke:orange, stroke-width:3px
-    classDef SVC stroke:powderblue, stroke-width:3px
-    classDef note stroke:black, stroke-width:1px
-    
-    K["Weka web app
-    nshm-weka-test.gns.cri.nz"]:::nshm
-    NB["https://nshm-api-test.gns.cri.nz/weka-app-api/graphql"]:::note 
-    subgraph GW["API Gateway layer"]
-        A["API Gateway:
-        test-nshm-weka-apigw (4ra58fifn3)"]:::AWS
-        F["lambda:
-        nshm-weka-apigw-test-app"]:::nshm
-    end
-
-    subgraph SUP["graphql microservices layer"]
-        direction LR
-
-        %% K-API[weka-graphql-api]:::nshm
-        S-API[solvis-graphql-api]:::nshm
-        T-API[nshm-toshi-api]:::nshm 
-        H-API[nshm-hazard-graphql-api]:::nshm              
-    end
-    K -.-|graphql query| NB -.-> A -->|path: weka-app-api/graphql| F 
-    F --> S-API
-    %%F --> K-API
-    F --> T-API 
-    F --> H-API
-```
+ - [Weka Deployment Stack](/nzshm-documentation/architecture/weka_deployment_stack/) describes the complete Weka stack.
+ - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Kororaa stacks.
+ - **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-weka-apigw)
 
 ## Deployments
 
 Deployment environments AWS_TEST and AWS_PROD each define the following variables:
+
+### Environment variables
 
 ```
 NZSHM22_HAZARD_API_KEY
@@ -50,6 +19,10 @@ NZSHM22_SOLVIS_API_KEY
 NZSHM22_SOLVIS_API_URL
 NZSHM22_TOSHI_API_KEY
 NZSHM22_TOSHI_API_URL
+NZSHM22_SEARCH_API_KEY
+NZSHM22_SEARCH_API_URL
+NZSHM22_NSHM_MODEL_API_URL
+NZSHM22_NSHM_MODEL_API_KEY
 ```
 
 -----
@@ -59,7 +32,7 @@ NZSHM22_TOSHI_API_URL
 #### API gateway configuration
 | AWS  (API gateway)                     | Github Environment | Branch       |
 | -------------------------------------- | ------------------ | ------------ | 
-| test-nshm-weka-apigw (3ksmpv8l4i)   |          | deploy-test  | 
+| test-nshm-weka-apigw (3ksmpv8l4i)      |                    | deploy-test  | 
 
 #### Lambda
 | AWS lambda function name                                    | Github Environment | Branch       |

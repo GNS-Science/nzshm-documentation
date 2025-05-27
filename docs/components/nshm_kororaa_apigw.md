@@ -1,43 +1,16 @@
 # Kororaa Application API Gateway
 
-A stitched graphql API for Kororaa, which amalgamates the function-specific apis into an application API Gateway for the NSHM web app (aka Kororaa).
+A stitched graphql API for the NSHM Kororaa web app (NSHM/ Kororaa).
 
-- on **Github:** [GNS-Science/nshm-kororaa-apigw](https://github.com/GNS-Science/nshm-kororaa-apigw)
-
-For an overview, please see the [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) page.
-
-```mermaid
-graph TD
-    classDef nshm stroke:lightgreen, stroke-width:3px
-    classDef AWS stroke:orange, stroke-width:3px
-    classDef SVC stroke:powderblue, stroke-width:3px
-    classDef note stroke:black, stroke-width:1px
-    
-    K["Kororaa web app
-    nshm-test.gns.cri.nz"]:::nshm
-    NB["https://nshm-api-test.gns.cri.nz/kororaa-app-api/graphql"]:::note 
-    subgraph GW["API Gateway layer"]
-        A["API Gateway:
-        test-nshm-kororaa-apigw (4ra58fifn3)"]:::AWS
-        F["lambda:
-        nshm-kororaa-apigw-test-app"]:::nshm
-    end
-
-    subgraph SUP["graphql microservices layer"]
-        direction LR
-
-        K-API[kororaa-graphql-api]:::nshm
-        S-API[solvis-graphql-api]:::nshm
-        T-API[nshm-toshi-api]:::nshm               
-    end
-    K -.-|graphql query| NB -.-> A -->|path: kororaa-app-api/graphql| F 
-    F --> S-API
-    F --> K-API
-    F --> T-API 
-
-```
+ - [Weka Deployment Stack](/nzshm-documentation/architecture/weka_deployment_stack/) describes the complete Kororaa stack.
+ - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Kororaa stacks.
+ - **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-kororaa-apigw)
 
 ## Deployments
+
+Deployment environments AWS_TEST and AWS_PROD each define the following variables:
+
+### Environment variables
 
 Deployment environments AWS_TEST and AWS_PROD each define the following variables:
 
