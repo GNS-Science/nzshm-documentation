@@ -87,20 +87,12 @@ graph TD
     subgraph SUP["graphql microservices layer"]
         direction TB
 
-        S-API[nshm-model-graphql-api]:::nshm
+        S-API[nshm-kororaa-api]:::nshm
         T-API[nshm-toshi-api]:::nshm
         V-API[nshm-solvis-api]:::nshm
 
     end
 
-    subgraph DEP["unused microservices"]
-        direction TB
-
-        H-API[nshm-hazard-api]:::nshm-deprecated
-        Q-API[nshm-search-api]:::nshm-deprecated
-    end
-
     F2 -.-> SUP
-    SUP ---> DEP
 
 ```

@@ -1,19 +1,3 @@
-this is a list of all the NSHM project components managed by Computational Working Group (CWG).
-
-## Web service  API gateways
-
- - [Kororaa Application API Gateway](nshm_kororaa_apigw.md) a stitched graphql API for Kororaa.
-  
-
-## microservice APIs
-
- - [Solvis Graphql API](solvis_graphql_api.md) a graphql API for analysis of opensha modular Inversion Solutions.
-
- - [Kororaa Graphql API]() app specific features.     
-   NB this currently includes hazard, which should have a domain microservice.
-
- - [Toshi API]() Toshi API. nshm-toshi-api
-
 ## All NSHM API and Gateway endpoints
 
 ### PROD (LIVE)

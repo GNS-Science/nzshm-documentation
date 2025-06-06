@@ -3,8 +3,8 @@
 A stitched graphql API for the NSHM Weka web app (aka Weka).
 
  - [Weka Deployment Stack](/nzshm-documentation/architecture/weka_deployment_stack/) describes the complete Weka stack.
- - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Kororaa stacks.
  - **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-weka-apigw)
+ - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Kororaa stacks.
 
 ## Deployments
 

@@ -1,6 +1,6 @@
 ## Solvis Graphql API
 
-A graphql API for analysis of opensha modular Inversion Solutions
+A graphql API wrapping the [solvis library](./solvis.md) for analysis of opensha modular Inversion Solutions.
 
 Provides analytical services to help explore and analyse key components of the NSHM source rate model.
 

@@ -2,7 +2,7 @@
 
 A stitched graphql API for the NSHM Kororaa web app (NSHM/ Kororaa).
 
- - [Weka Deployment Stack](/nzshm-documentation/architecture/weka_deployment_stack/) describes the complete Kororaa stack.
+ - [Kororaa Deployment Stack](/nzshm-documentation/architecture/kororaa_deployment_stack/) describes the complete Kororaa stack.
  - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Kororaa stacks.
  - **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-kororaa-apigw)
 

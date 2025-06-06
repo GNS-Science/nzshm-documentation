@@ -5,8 +5,11 @@ This section covers the patterns and typical organisation used for different typ
  - [Service Deployment Guide](./service_deployment_guide/)
  - [React UI Project Guide](./react_project_guide.md)
 
-### TODO
+## Training
 
+ - [API Devops training](./api_devops_training/)
+
+### TODO
 
    - Python project guidelines
 
