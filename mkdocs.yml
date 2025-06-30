@@ -1,11 +1,11 @@
-site_name: NZSHM Documentation
+site_name: NZSHM CWG Documentation
 site_url: https://gns-science.github.io/nzshm-documentation
 repo_url: https://github.com/gns-science/nzshm-documentation
 repo_name: gns-science/nzshm-documentation
 
 nav:
   - About: index.md
-  - Science Processes:
+  - Science Pipelines:
       - science_process/index.md
       - Source models: science_process/source_models.md
       - Hazard: 
@@ -17,13 +17,43 @@ nav:
       - Related: science_process/related.md
       - discussion: science_process/discussion.md
 
-  - Systems Architecture:
+  - IT Architecture:
+    - Overview: 
       - architecture/index.md
+      - Applications:
+        - Kororaa stack: architecture/kororaa_deployment_stack.md
+        - Weka stack: architecture/weka_deployment_stack.md        
+        - Collective Web stacks: architecture/api_gateway_deployments.md # maybe redundant ??
+    - Patterns:
       - Web API services: architecture/services.md
-      - API Gateway pattern: architecture/api_gateway_pattern.md
-      - API Gateway deployments: architecture/api_gateway_deployments.md
-      - Common Infrastructure: architecture/common_infrastructure.md
-      - Data Management Plan:
+      - API Gateway pattern:  architecture/api_gateway_pattern.md
+    - Common components and services: architecture/common_infrastructure.md
+ 
+    - Components:
+      - Applications:
+        - Kororaa: components/kororaa.md
+        - Weka: components/weka.md
+        # - Kororaa2:
+        #   - components/kororaa/index.md
+        #   - API deployment: components/kororaa/aws_api_deployment.md
+        #   - APP deployment: components/kororaa/aws_app_deployment.md
+        - NZSHM Opensha: components/nshm_opensha.md
+      - Web APIs:
+        - nshm-kororaa-apigw: components/nshm_kororaa_apigw.md
+        - nshm-weka-apigw: components/nshm_weka_apigw.md
+        - nshm-model-graphql-api: components/nshm_model_graphql_api.md
+        - solvis-graphql-api: components/solvis_graphql_api.md
+        - nshm-toshi-api: components/nshm_toshi_api.md
+      - Libraries:
+        - solvis: components/solvis.md
+        - toshi-hazard-store: components/toshi_hazard_store.md
+        - nzshm-common: components/nzshm_common_py.md
+        - nzshm-model: components/nzshm_model.md
+
+    - Deployments:
+      - components/index.md
+
+  - Data Management Plan:
         - architecture/data_mgmnt_plan/index.md
         - Data Collection: architecture/data_mgmnt_plan/1_data_collection.md
         - Documentation and Metadata: architecture/data_mgmnt_plan/2_docs_and_meta.md
@@ -33,20 +63,11 @@ nav:
         - Data Sharing: architecture/data_mgmnt_plan/6_data_sharing.md
         - Responsibilities and Resources: architecture/data_mgmnt_plan/7_responsibilities_and_resources.md
 
-  - Technical Guidelines:
+
+  - IT Guidelines:
       - guidelines/index.md
       - API Service Deployments: guidelines/service_deployment_guide.md
       - React UI Project Guide: guidelines/react_project_guide.md
-
-  - Components:
-      - components/index.md
-      # - Kororaa:
-      #  - components/kororaa/index.md
-      #  - API deployment: components/kororaa/aws_api_deployment.md
-      #  - APP deployment: components/kororaa/aws_app_deployment.md 
-      - nshm-kororaa-apigw: components/nshm_kororaa_apigw.md
-      - nshm-weka-apigw: components/nshm_weka_apigw.md
-      - solvis-graphql-api: components/solvis_graphql_api.md
 
   - Reports and Presentations:
       - reports_and_presentations/index.md
