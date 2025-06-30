@@ -1,8 +1,6 @@
 ## Kororaa web application stack
 
-The **Kororaa App** is the public website for NSHM scientific results. 
-It's used by Geoseimic scientists, Researchers, Engineering and Insurance experts to help understand the 
-properties of the 2022 National Seismic Hazard Model of NZ.
+The **Kororaa App** is the public web site for NSHM scientific results. 
 
 ## Custom components
 
@@ -20,8 +18,6 @@ These components are developed and supported by the Compute Working Group team.
     
     **Github:** [GNS-Science/solvis-graphql-api](https://github.com/GNS-Science/solvis-graphql-api). Used by the Rupture Map explorer UI component.
 
-TODO: revise
-
  - [nshm-toshi-api](/nzshm-documentation/components/nshm_toshi_api) is a graphql API managing the NSHM experimental artefacts.
     
     **Github:** [GNS-Science/nshm-toshi-api](https://github.com/GNS-Science/nshm-toshi-api).
@@ -32,8 +28,8 @@ Usually there is a PROD and TEST stage deployment, and sometimes a DEV deploymen
 
 ## Cloud configuration
 
-These components are configured so that the stack functions correctly. Asd they're rarely touched they are maintained manually,
- via the AWS Consolce unless stated otherwise.
+These components are configured so that the stack functions correctly. As they're rarely touched they are maintained manually,
+ via the AWS Console unless stated otherwise.
 
  - Elastic Search API is an AWS Kibana/Elastic managed service. Objects stored in ToshiAPI are indexed here, and used via the Kororaa Search UI.
 

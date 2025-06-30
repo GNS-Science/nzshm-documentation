@@ -4,7 +4,7 @@
 A React web application
 
 The **Kororaa App** is the public website for NSHM scientific results, it's available at https://nshm.gns.cri.nz 
-It's used by Geoseimic scientists, Researchers, Engineering and Insurance experts to help understand the 
+It's used by Geoseismic scientists, Researchers, Engineering and Insurance experts to help understand the 
 properties of the 2022 National Seismic Hazard Model of NZ.
 
 

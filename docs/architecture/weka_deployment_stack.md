@@ -34,8 +34,8 @@ Usually there is a PROD and TEST stage deployment, and sometimes a DEV deploymen
 
 ## Cloud configuration
 
-These components are configured so that the stack functions correctly. Asd they're rarely touched they are maintained manually,
- via the AWS Consolce unless stated otherwise.
+These components are configured so that the stack functions correctly. As they're rarely touched they are maintained manually,
+ via the AWS Console unless stated otherwise.
 
  - Elastic Search API is an AWS Kibana/Elastic managed service. Objects stored in ToshiAPI are indexed here, and used via the Weka Search UI.
 

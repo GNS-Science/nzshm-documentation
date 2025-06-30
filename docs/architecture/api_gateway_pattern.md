@@ -44,8 +44,8 @@ For Kororaa the microservices are:
 
  - [kororaa-graphql-api](/nzshm-documentation/components/kororaa_graphql_api) which handles Kororaa app specific functions e.g help text, science publications, model release history. 
 
- - [solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api) supports the rupture explorer map, and is based the solvis library. 
+ - [solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api) supports the rupture explorer map, and is based on the solvis library. 
 
- - [nshm-hazard-graphql-api](/nzshm-documentation/components/nshm_toshi_api) supports the hazard curve and hazard map user queries. 
+ - [nshm-hazard-graphql-api](/nzshm-documentation/components/nshm-hazard-graphql-api) supports the hazard curve and hazard map user queries. 
 
  For more specific configurations please see **[API gateway deployments](../api_gateway_deployments)**.

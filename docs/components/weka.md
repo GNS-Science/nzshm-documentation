@@ -12,7 +12,7 @@ involved in running and evaluating experimental results from the NSHM CWG [Scien
  - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Weka stacks.
  - **Github:** [GNS-Science/weka](https://github.com/GNS-Science/weka)
 
-![Koroaa home page](images/weka-search.png)
+![Weka search page](images/weka-search.png)
 
 ### Architecture
 
