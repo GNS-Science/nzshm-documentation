@@ -16,15 +16,11 @@ These components are developed and supported by the Compute Working Group team.
     
     **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-weka-apigw).
 
- - [solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api) is a graphql API wrapping the [solvis](https://github.com/GNS-Science/solvis) library. 
-    
-    **Github:** [GNS-Science/solvis-graphql-api](https://github.com/GNS-Science/solvis-graphql-api). Used by the Rupture Map explorer UI component.
-
- - [nshm-model-graphql-api](/nzshm-documentation/components/nshm-model-graphql-api) is a graphql API wrapping the nzshm-model library. 
+ - [nshm-model-graphql-api](/nzshm-documentation/components/nshm_model_graphql_api/) is a graphql API wrapping the nzshm-model library. 
     
     **Github:** [GNS-Science/nshm-model-graphql-api](https://github.com/GNS-Science/nshm-model-graphql-api).
 
- - [nshm-toshi-api](/nzshm-documentation/components/nshm_toshi_api) is a graphql API managing the NSHM experimental artefacts.
+ - [nshm-toshi-api](/nzshm-documentation/components/nshm_toshi_api/) is a graphql API managing the NSHM experimental artefacts.
     
     **Github:** [GNS-Science/nshm-toshi-api](https://github.com/GNS-Science/nshm-toshi-api).
 
@@ -92,18 +88,9 @@ graph TD
         ES_API[elastic-search-api]:::AWS
         S-API[nshm-model-graphql-api]:::nshm
         T-API[nshm-toshi-api]:::nshm
-        M-API[nshm-model-api]:::nshm
 
-    end
-
-    subgraph DEP["unused microservices"]
-        direction TB
-
-        H-API[nshm-hazard-api]:::nshm-deprecated
-        Q-API[nshm-search-api]:::nshm-deprecated
     end
 
     F2 -.-> SUP
-    SUP ---> DEP
 
 ```
