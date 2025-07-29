@@ -1,29 +1,12 @@
-# Weka Application API Gateway
+## Weka Application API Gateway
 
-A stitched graphql API for the NSHM Weka web app (aka Weka).
+A graphql API Gateway for the NSHM Weka web app (aka Weka).
 
  - [Weka Deployment Stack](/nzshm-documentation/architecture/weka_deployment_stack/) describes the complete Weka stack.
  - **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-weka-apigw)
  - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Kororaa stacks.
 
 ## Deployments
-
-Deployment environments AWS_TEST and AWS_PROD each define the following variables:
-
-### Environment variables
-
-```
-NZSHM22_HAZARD_API_KEY
-NZSHM22_HAZARD_API_URL
-NZSHM22_SOLVIS_API_KEY
-NZSHM22_SOLVIS_API_URL
-NZSHM22_TOSHI_API_KEY
-NZSHM22_TOSHI_API_URL
-NZSHM22_SEARCH_API_KEY
-NZSHM22_SEARCH_API_URL
-NZSHM22_NSHM_MODEL_API_URL
-NZSHM22_NSHM_MODEL_API_KEY
-```
 
 -----
 ### TEST
@@ -34,7 +17,7 @@ NZSHM22_NSHM_MODEL_API_KEY
 | -------------------------------------- | ------------------ | ------------ | 
 | test-nshm-weka-apigw (3ksmpv8l4i)      |                    | deploy-test  | 
 
-#### Lambda
+#### Lambda functions
 | AWS lambda function name                                    | Github Environment | Branch       |
 | ----------------------------------------------------------- | ------------------ | ------------ | 
 | nshm-weka-apigw-test-app                                    | AWS_TEST           | deploy-test  | 
@@ -71,7 +54,7 @@ Serverless Domain Manager:
 | -------------------------------------- | ------------------ | ------------ | 
 | prod-nshm-weka-apigw (NONE)      |                    | main  | 
 
-#### Lambda
+#### Lambda Functions
 | AWS lambda function name                                    | Github Environment | Branch       |
 | ----------------------------------------------------------- | ------------------ | ------------ | 
 | nshm-weka-apigw-prod-app                                    | AWS_PROD           | main         | 
