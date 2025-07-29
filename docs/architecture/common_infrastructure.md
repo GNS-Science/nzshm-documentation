@@ -30,7 +30,7 @@ graph
 ```
 ## Python libraries for Science
 
-These are the main python libraries used commonly throughtout science application code.
+These are the main python libraries used commonly in our science application code.
 
 ```mermaid
 graph
