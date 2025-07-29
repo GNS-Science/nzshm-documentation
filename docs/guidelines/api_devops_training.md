@@ -26,7 +26,7 @@ Then:
  - check it out locally.
  - follow the readme/docs to install & test.
  - run the service locally.
- - test the service locally via its graphql web UI.
+ - test the service locally via the igraphql web UI.
 
 Finally, demonstrate to the team:
 
@@ -70,12 +70,10 @@ browser to reproduce the results from Exercise 1 above.
    fix: Ask for these permissions in AWS account.
 
 - `Resource handler returned message: "Unzipped size must be smaller than 262144000 bytes ....`
-
-   
+ 
   As python packages versions change sometimes this limit may be exceeded,
 
   Various techniques for addressing this, ask for help.
-
 
 
 ## Exercise 2 - Use the weka graphql API gateway service.
@@ -85,8 +83,7 @@ browser to reproduce the results from Exercise 1 above.
  - check it out locally https://github.com/GNS-Science/nshm-kororaa-apigw
  - follow the readme / docs
  - run the service locally, using remote PROD schemas.
- - test the service locally vi its graphql when UI
-
+ - test the service locally using the igraphql web UI.
 **Demo**
 
 Finally, demonstrate to the team:
