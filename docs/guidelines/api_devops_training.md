@@ -31,9 +31,10 @@ Then:
 Finally, demonstrate to the team:
 
  - accessing the web UI locally with a web browser.
- - using a `query`  provided by the API to retrieve something
+ - using a `query` provided by the API to retrieve something
     relevant to the NSHM project. (e.g. a map, a rupture, a standardised location).
- 
+    NB finding an example client graphql query in one of the cleint projects.
+
 ## Exercise 1A - manually deploy a serverless service
 
 ## Caution:
@@ -84,6 +85,7 @@ browser to reproduce the results from Exercise 1 above.
  - follow the readme / docs
  - run the service locally, using remote PROD schemas.
  - test the service locally using the igraphql web UI.
+
 **Demo**
 
 Finally, demonstrate to the team:

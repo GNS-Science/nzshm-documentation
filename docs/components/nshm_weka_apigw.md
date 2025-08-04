@@ -54,7 +54,7 @@ Serverless Domain Manager:
 | -------------------------------------- | ------------------ | ------------ | 
 | prod-nshm-weka-apigw (NONE)      |                    | main  | 
 
-#### Lambda Functions
+#### Lambda functions
 | AWS lambda function name                                    | Github Environment | Branch       |
 | ----------------------------------------------------------- | ------------------ | ------------ | 
 | nshm-weka-apigw-prod-app                                    | AWS_PROD           | main         | 
