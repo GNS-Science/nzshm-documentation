@@ -9,11 +9,11 @@ graph TD
     
     K["Kororaa web app
     nshm-test.gns.cri.nz"]:::nshm
-    NB["https://nshm-api-test.gns.cri.nz/kororaa-app-api/graphql"]:::note 
+    NB["HTTPS: nshm-api-test.gns.cri.nz/kororaa-app-api/graphql"]:::note 
 
     W["Weka web app
         weka-test.gns.cri.nz"]:::nshm
-    NB3["https://nshm-api-test.gns.cri.nz/weka-app-api/graphql"]:::note 
+    NB3["HTTPS: nshm-api-test.gns.cri.nz//weka-app-api/graphql"]:::note 
 
     subgraph GW["API Gateway layer"]
 
