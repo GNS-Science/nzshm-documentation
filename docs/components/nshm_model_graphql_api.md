@@ -2,13 +2,20 @@
 
 ## NSHM Model Graphql API
 
-A graphql API graphql API wrapping the nzshm-model library. 
+A graphql API wrapping the [nzshm-model](/nzshm-documentation/components/nzshm_model/) library. 
 
-**Github:** [GNS-Science/nshm-model-graphql-api](https://github.com/GNS-Science/nshm-model-graphql-api)
+[![Build Status](https://github.com/GNS-Science/nshm-model-graphql-api/actions/workflows/dev.yml/badge.svg)](https://github.com/GNS-Science/nshm-model-graphql-api/actions/workflows/dev.yml)
+[![codecov](https://codecov.io/gh/GNS-Science/nshm-model-graphql-api/branch/main/graphs/badge.svg)](https://codecov.io/github/GNS-Science/nshm-model-graphql-api)
+
+## Links
+
+ - [Github: GNS-Science/nshm-model-graphql-api](https://github.com/GNS-Science/nshm-model-graphql-api)
+ - [Dependent projects](https://github.com/GNS-Science/nshm-model-graphql-api/network/dependents)
+
 
 ## Deployments
 
-Note that the both TEST and PROD share the same GITHUB environmemt because `serverless.yml` handles any stage specifics internally. 
+Note that the both TEST and PROD share the same GITHUB environment because `serverless.yml` handles any stage specifics internally. 
 
 -----
 ### PROD

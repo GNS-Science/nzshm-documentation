@@ -1,11 +1,17 @@
-# solvis-graphql-api
+## Solvis graphql API
+
+[![Build Status](https://github.com/GNS-Science/solvis-graphql-api/actions/workflows/dev.yml/badge.svg)](https://github.com/GNS-Science/solvis-graphql-api/actions/workflows/dev.yml)
+[![codecov](https://codecov.io/gh/GNS-Science/solvis-graphql-api/branch/main/graphs/badge.svg)](https://codecov.io/github/GNS-Science/solvis-graphql-api)
 
 A graphql API wrapping the [solvis library](./solvis.md) for analysis of opensha modular Inversion Solutions.
 
 Provides analytical services to help explore and analyse key components of the NSHM source rate model.
 
- - [on github](https://github.com/GNS-Science/solvis-graphql-api)
- - [Technical Docs](https://github.com/GNS-Science/solvis-graphql-api)
+## Links
+
+ - [Github: GNS-Science/solvis-graphql-api](https://github.com/GNS-Science/solvis-graphql-api)
+ - [Dependent projects](https://github.com/GNS-Science/solvis-graphql-api/network/dependents)
+
 
 ## Deployments
 
