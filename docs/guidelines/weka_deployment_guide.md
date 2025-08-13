@@ -3,46 +3,33 @@
 This page captures at a high-level all the steps required to deploy the weka application and all its component parts.
 Some of these steps are only ever done once, while many will be repeated as new features or updates are applied.
 
-## Background info
+The new reader can familiarise themself with the [NSHM Web stacks](/nzshm-documentation/architecture/api_gateway_deployments/) for an overview of how the APIs share 
+some common configuration. 
 
-The reader can familiarise themsel with the following material...
-
- - The microservice architecture (link)
-     - [NSHM web service API overview](/nzshm-documentation/architecture/services/)
-     - [NSHM Web stacks](/nzshm-documentation/architecture/api_gateway_deployments/)
-
-## Weka stack components 
-
-- see [Weka stack](/nzshm-documentation/architecture/weka_deployment_stack/)
+Please see [Weka stack](/nzshm-documentation/architecture/weka_deployment_stack/) for details of the current Weka stack. It is made up of graphql microservices, consolidated into an appliciation gatewy, to which the Weka web app connects.
 
 ## Deployment Strategy
 
-It's pretty straightforwad. We must work up from the bottom to the top, because almost everything depends on something at a lower level e.g. `kororaa -> kororaa-graphql-apigw -> solvis-graphql-api -> solvis`. In turn, solvis needs `pandas, numpy, geopandas, pyproj, shapely` etc.
+It's pretty straightforward... we must work up from the bottom to the top, since almost everything depends on something at a lower level.
+We expect that each service component should have enough testing and QA in place so that the service contract with its clients is well defined and documented. 
 
-Some basic assumptions:
+We want to be sure that in our deployment environment:
 
- - that each component should have enough testing and QA in place so that the service contract with it's clients is well defined and testable. 
- - component unit tests use mock/stubbing to replace any dependent service / API calls.
+- each microservice API is operating and has the correct release version.
+- the application gateway has a current schema for each microservice and is proxying the correct microservice endpoints.
+- that public API URI (DNS names/paths) map to the correct API gateway service.
+- the Web Application is served from its public URI e.g **weka.gns.cri.nz**.
+- the Web Application is connecting to the API correctly e.g **nshm-api.gns.cri.nz/weka-app-api/graphql**.
 
-## Then 
+It is very rarely that we need to configure and check all of these at once. More commonly, a new User feature requires both API and UI changes.
+Typically this would require change in a particular microservice (and possibly it's underlying library), a schema refresh for the APIGW, and then some UI changes in the web application.  
 
- - AWS Cloud Formation configuration. (link)
- - NSHM DNS config and SSL certificates. (link) 
+Some elements of the stack are setup up once and are very unlikely to need change. These include:
 
- - [ ] identifying all the stack components
+ - DNS names for the public facing application and API endpoints
+ - SSL Certificates for these are valdiated once, and then set to auto refresh.
+ - Mapping the public facing API URIs to the correct API gateway service.
+ - CloudFront caching for the web application. (although cache invalidation may be needed on each app deployment)
 
-## Testing the component parts
+See [deploy a web app](./deploy_a_web_app.md) for details on completing these steps.
 
-## Testing the integration
-
-* integration steps (graphql schema APIGW updates)
-
-* one-off configuration and testing steps (via AWS tools and IT support dependencies)
-
-Domain names
-
-SSL certificates
-
-API Gateway config
-
-CloudFront distributions
