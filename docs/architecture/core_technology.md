@@ -1,29 +1,39 @@
 # NSHM Core Technology
 
-This section lists the 3rd party services that the NSHM stacks are
-based upon.
+This section discusses the software technology used in the NSHM project.
 
 ## Infrastructure services
 
  - **Amazon Web Services (AWS)** for Cloud services.
- - **Serverless framework** for AWS service management and Contiuous Deployment (CD).
+
  - **Github** for code version control and CI/CD pipelines using **Github Actions**. 
  - **Pypi** is the usual place where Python libraries are published for public use.
- - Coverage.io.
+ - **codecov.io** helps us report on code coverage.
  
 ## Development Languages
 
+Our main drivers in selecting sotware languages are:
+
+ - ease of use for the wider science community,
+ - talent pool - can we get access to extra developers when necessary,
+ - good support across the common compute platforms,
+ - compatablity with other projects we need to collaborate with (GEM, USGS).
+
+With these considerations, we have the following:
+
  - **Python 3** is our primary development language.
-   It was selected because our science community end users are comfortable with it and the common python libraries we employ. Also, because the serverless and AWS environments offer good python support.
-   NSHM core python libraries are published to PyPI.
+   Python is used widely in our science community, as are many of the python libraries we used. Since we want to share our sofware with the community it makes sense to delivey this in python. Our main NSHM python libraries are published to PyPI.
+ - **Java** is mainly used for USGS collaboration.
+ - **Javascript** and **Typescript** are used in our web applications, and for their API gateways. These are chosen because of the frameworks available, and their wide coommunity support.
 
- - Java
- - Javascript / Typescript
+## Frameworks
 
-## Graphql
-
- - Python: Graphene for schemas
- - Javascript: Apollo for schemas and schema stitching (consolidation).
+ - **Apollo** for schemas and schema consolidation (javascript)
+ - **Graphene** for graphql schema microservices (python)
+ - **Material UI** for Web application styinng (typescript/CSS)
+ - **Serverless framework** for AWS service management and Contiuous Deployment (CD).
+ - **React** for the web application logic (typescript)
+ - **Arrow** for dataset management (python + pyarrow) 
 
 ## Data management
 

@@ -1,6 +1,6 @@
 # NSHM System Architecture
 
-This section describes the info technology supporting the wider NSHM team and the public-facing web appilations. This infrastructure is developed and maintained by the **NZSHM Compute Working Group (CWG)** team of three.
+This section describes the info technology supporting the wider NSHM team and the public-facing web applications. This infrastructure is developed and maintained by the **NZSHM Compute Working Group (CWG)** team of three.
 
 ## Table of contents
 
