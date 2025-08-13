@@ -19,14 +19,14 @@ nav:
 
   - IT Architecture:
     - architecture/index.md
-    - Core Technology: 
-      - architecture/core_technology.md 
+    - Technology: 
+      - Tech choices: architecture/core_technology.md 
       - Common components and services: architecture/common_infrastructure.md
-    - Services Overview: 
+    - NSHM Services: 
       - Web services: architecture/services.md
       - API Gateway pattern:  architecture/api_gateway_pattern.md
       - NSHM Web stacks: architecture/api_gateway_deployments.md # maybe redundant ??
-    - Applications:
+    - NSHM Applications:
       - Kororaa:
         - Kororaa UI: components/kororaa.md
         - Kororaa stack: architecture/kororaa_deployment_stack.md
@@ -34,14 +34,23 @@ nav:
         - Weka UI: components/weka.md      
         - Weka stack: architecture/weka_deployment_stack.md        
       - NZSHM Opensha: components/nshm_opensha.md
-    - Web APIs:
+      - TS1170: components/TS1170.md
+      - Runzi: components/runzi.md
+    - Cloud services:
+      - Amazon AWS: cloud/aws_services.md
+      - Github: cloud/github_services.md
+      - codecov: cloud/codecov.md
+      - Python PyPI: cloud/pypi.md
+      - Serverless Framework: cloud/serverless_framework.md
+
+    - NSHM Web APIs:
         - nshm-kororaa-apigw: components/nshm_kororaa_apigw.md
         - nshm-weka-apigw: components/nshm_weka_apigw.md
         - nshm-model-graphql-api: components/nshm_model_graphql_api.md
         - solvis-graphql-api: components/solvis_graphql_api.md
         - nshm-toshi-api: components/nshm_toshi_api.md
         - nshm-hazard-graphql-api: components/nshm_hazard_graphql_api.md        
-    - Libraries:
+    - NSHM Python Libraries:
         - solvis: components/solvis.md
         - toshi-hazard-store: components/toshi_hazard_store.md
         - nzshm-common: components/nzshm_common_py.md
@@ -49,6 +58,14 @@ nav:
 
     - Deployments:
       - components/index.md
+
+  - IT Operations:
+      - guidelines/index.md
+      - API Service Deployments: guidelines/service_deployment_guide.md
+      - React UI Project Guide: guidelines/react_project_guide.md
+      - Weka Deployment Guide: guidelines/weka_deployment_guide.md
+      - Website Deployment: guidelines/deploy_a_web_app.md
+      - Cloudfront Guide:  guidelines/setup_a_cloudfront_distribution.md
 
   - Data Management Plan:
     - architecture/data_mgmnt_plan/index.md
@@ -60,12 +77,6 @@ nav:
     - Data Sharing: architecture/data_mgmnt_plan/6_data_sharing.md
     - Responsibilities and Resources: architecture/data_mgmnt_plan/7_responsibilities_and_resources.md
 
-
-  - IT Guidelines:
-      - guidelines/index.md
-      - API Service Deployments: guidelines/service_deployment_guide.md
-      - React UI Project Guide: guidelines/react_project_guide.md
-      - Weka Stack Deployment Guide: guidelines/weka_deployment_guide.md 
   - Reports and Presentations:
       - reports_and_presentations/index.md
 
