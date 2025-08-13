@@ -1,4 +1,4 @@
-# Kororaa Application API Gateway
+## Kororaa Application API Gateway
 
 A stitched graphql API for the NSHM Kororaa web app (NSHM/ Kororaa).
 
