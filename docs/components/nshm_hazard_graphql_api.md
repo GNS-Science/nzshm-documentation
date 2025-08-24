@@ -1,5 +1,3 @@
-
-
 ## NSHM Hazard Graphql API
 
 [![Build Status](https://github.com/GNS-Science/nshm-hazard-graphql-api/actions/workflows/dev.yml/badge.svg)](https://github.com/GNS-Science/nshm-hazard-graphql-api/actions/workflows/dev.yml)

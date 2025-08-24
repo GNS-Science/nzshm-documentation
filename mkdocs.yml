@@ -38,18 +38,18 @@ nav:
       - Runzi: components/runzi.md
     - Cloud services:
       - Amazon AWS: cloud/aws_services.md
+      - Serverless Framework: cloud/serverless_framework.md
       - Github: cloud/github_services.md
       - codecov: cloud/codecov.md
       - Python PyPI: cloud/pypi.md
-      - Serverless Framework: cloud/serverless_framework.md
-
     - NSHM Web APIs:
+        - kororaa-graphql-api: components/kororaa_graphql_api.md    
+        - nshm-hazard-graphql-api: components/nshm_hazard_graphql_api.md
         - nshm-kororaa-apigw: components/nshm_kororaa_apigw.md
-        - nshm-weka-apigw: components/nshm_weka_apigw.md
         - nshm-model-graphql-api: components/nshm_model_graphql_api.md
-        - solvis-graphql-api: components/solvis_graphql_api.md
         - nshm-toshi-api: components/nshm_toshi_api.md
-        - nshm-hazard-graphql-api: components/nshm_hazard_graphql_api.md        
+        - nshm-weka-apigw: components/nshm_weka_apigw.md
+        - solvis-graphql-api: components/solvis_graphql_api.md
     - NSHM Python Libraries:
         - solvis: components/solvis.md
         - toshi-hazard-store: components/toshi_hazard_store.md

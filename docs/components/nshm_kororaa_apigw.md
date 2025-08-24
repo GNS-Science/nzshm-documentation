@@ -1,5 +1,7 @@
 ## Kororaa Application API Gateway
 
+[![Build Status](https://github.com/GNS-Science/nshm-kororaa-apigw/actions/workflows/ci-test.yaml/badge.svg)](https://github.com/GNS-Science/nshm-kororaa-apigw/actions/workflows/ci-test.yaml)
+
 A stitched graphql API for the NSHM Kororaa web app (NSHM/ Kororaa).
 
  - [Kororaa Deployment Stack](/nzshm-documentation/architecture/kororaa_deployment_stack/) describes the complete Kororaa stack.

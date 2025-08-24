@@ -1,5 +1,3 @@
-
-
 ## NSHM Model Graphql API
 
 

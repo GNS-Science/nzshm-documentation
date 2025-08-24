@@ -16,5 +16,7 @@ The logic tree definitions, final configurations, and versioning of the New Zeal
 
 ## Features
 
-TODO
-
+ - Iterate the available NSHM models.
+ - Iterate the components, or Logic Tree Branches (LTBs) for each model.
+ - A branch component registry for unique, compact string ids for all the available LTBs.
+ - Build job configurations for the OpenQuake PSHA engine, based on a given NSHM model or part(s) thereof.

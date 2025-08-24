@@ -1,6 +1,6 @@
 # README
 
-This project is documentation only. It uses poetry to install the necessary components for authoring these. 
+This project provides documentation for the projects and processes of the NSHM Computational Working Group (CWG). It uses poetry to install the necessary components for authoring these. 
 
 A Github Action workflow will publish the output to a github pages site. 
 

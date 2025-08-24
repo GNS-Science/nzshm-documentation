@@ -2,25 +2,25 @@
 
 The **Weka App** supercedes the original TUI (Toshi UI) application with a similar but modernised architecture. 
 It's used primarily by the CWG team and NSHM scientists
-involved in running and evaluating experimental results from the NSHM CWG [Scientific Process](./science_process/).
+involved in running and evaluating experimental results from the NSHM CWG [Scientific Process](../science_process/index.md).
 
 ## Custom components
 
 These components are developed and supported by the Compute Working Group team.
 
- - [Weka wep application ](/nzshm-documentation/components/weka/) is the Weka UI.
+ - [Weka wep application ](../components/weka.md) is the Weka UI.
     
     **Github:** [GNS-Science/weka](https://github.com/GNS-Science/weka).
 
- - [Weka API Gateway](/nzshm-documentation/components/nshm_weka_apigw/) is the application API for Weka.
+ - [Weka API Gateway](../components/nshm_weka_apigw.md) is the application API for Weka.
     
     **Github:** [GNS-Science/nshm-weka-apigw](https://github.com/GNS-Science/nshm-weka-apigw).
 
- - [nshm-model-graphql-api](/nzshm-documentation/components/nshm_model_graphql_api/) is a graphql API wrapping the nzshm-model library. 
+ - [nshm-model-graphql-api](../components/nshm_model_graphql_api.md) is a graphql API wrapping the nzshm-model library. 
     
     **Github:** [GNS-Science/nshm-model-graphql-api](https://github.com/GNS-Science/nshm-model-graphql-api).
 
- - [nshm-toshi-api](/nzshm-documentation/components/nshm_toshi_api/) is a graphql API managing the NSHM experimental artefacts.
+ - [nshm-toshi-api](../components/nshm_toshi_api.md) is a graphql API managing the NSHM experimental artefacts.
     
     **Github:** [GNS-Science/nshm-toshi-api](https://github.com/GNS-Science/nshm-toshi-api).
 

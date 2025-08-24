@@ -8,15 +8,15 @@ It's used by Geoseismic scientists, Researchers, Engineering and Insurance exper
 properties of the 2022 National Seismic Hazard Model of NZ.
 
 
- - [Kororaa Deployment Stack](/nzshm-documentation/architecture/kororaa_deployment_stack/) describes the complete stack.
- - [Api Gateway Pattern](/nzshm-documentation/architecture/api_gateway_pattern/) describes the pattern used by the Weka and Kororaa stacks.
+ - [Kororaa Deployment Stack](../architecture/kororaa_deployment_stack.md) describes the complete stack.
+ - [Api Gateway Pattern](../architecture/api_gateway_pattern.md) describes the pattern used by the Weka and Kororaa stacks.
  - **Github:** [GNS-Science/kororaa](https://github.com/GNS-Science/kororaa)
 
 ![Koroaa home page](images/kororaa-home.png)
 
 ### Architecture
 
-Below is a simplified diagram, please see [Kororaa Deployment Stack](/nzshm-documentation/architecture/kororaa_deployment_stack/) for more detail.
+Below is a simplified diagram, please see [Kororaa Deployment Stack](../architecture/kororaa_deployment_stack.md) for more detail.
 
 ```mermaid
 graph TD
