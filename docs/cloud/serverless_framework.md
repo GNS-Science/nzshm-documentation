@@ -7,13 +7,13 @@ Each NSHM API has a `serverless.yml` file which describes the API deployment. Se
 The [Serverless.yml Reference](https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml) is the canonical guide. We use the serverless.yml to:
 
  - define the application name, and components.
- - control the stages and regions in which dployments are run.
+ - control the stages and regions where deployments occur.
  - define any additional AWS resources and permissions.
- - configure serverless plugins (such as warming functions).
+ - configure serverless plugins (such as lamabda `warming` functions).
 
 ## Serverless CLI
 
-The [CLI reference](https://www.serverless.com/framework/docs/providers/aws/cli-reference) is canonical. We typically use these commands for
+Here, the [CLI reference](https://www.serverless.com/framework/docs/providers/aws/cli-reference) is canonical. We commonly ese these commands for
 local devops:
 
  - [`sls deploy`](https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy) 

@@ -48,31 +48,58 @@ features needed in the API Gateway services are only available from the [Apollo 
   - [Lambda Applications (ap-southeast-2)](https://ap-southeast-2.console.aws.amazon.com/lambda/home?region=ap-southeast-2#/applications) lists the lambda deployment stacks.
 
 ## API Gateway
-cloud/aws_api_gateway.md
+
+API gateway provides the interface between HTTP(S) web requests and the serverless lambda functions for NSHM web APIs. It is configured via the [**serverless**](../cloud/serverless_framework.md) configuration file for each service i.e. not manually. But in the AWS console eone can see the accompanying dashboard, configuration and 
+also the API keys associated with each service e.g. [the dashboard of the Kororaa APIGW service](https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/8wq8w9xika/dashboard?api=8wq8w9xika&region=ap-southeast-2).
+
+## CloudWatch
+
+CloudWatch provides monitoring facilities for other AWS services. Logging is used frequently to diagnose any service issues.
+
+See [CloudWatch Log Groups](https://ap-southeast-2.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-2#logsV2:log-groups).
+
+A few App dashboards have been manually configured to help assess the overall performanbce of NSHM services and the user experience.
+
+See [CloudWatch Dashboards](https://ap-southeast-2.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-2#dashboards)
+
+
+a CloudFront **Distribution** and will be cached on the AWS CloudFront ContentDistributionNetwork
+
+See AWS [CloudFront Distributions](https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=ap-southeast-2#/distributions)
+
 
 ## CloudFormation
-cloud/aws_cloudformation.md
+
+Cloudformation is used indirectly via the [**serverless**](../cloud/serverless_framework.md) configuration files. It can sometimes be useful to inspect the event log for a given stack if there are problems with serverless deployments.
+
+See AWS [CloudFormation Stacks](https://ap-southeast-2.console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks)
+
 
 ## CloudFront
-cloud/aws_cloudfront.md
+
+**Cloudfront** is used to attach SSL certificates to our public HTTPS resources. The Koroaa and Weka web applications, and a couple of static web sites. Each of these is 
+a CloudFront **Distribution** and will be cached on the AWS CloudFront ContentDistributionNetwork
+
+See AWS [CloudFront Distributions](https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=ap-southeast-2#/distributions)
 
 ## Certificate Manager
 
-Amazon Certificates Manager is used to produce SSL certificates. It produces auto-renewing certificates that are easily
+**Certificates Manager** is used to produce SSL certificates. It produces auto-renewing certificates that are easily
 integrated with the wider AWS ecosystem e.g Cloudfront. 
 
 See [Setup a Cloudfront Distribution](../guidelines/setup_a_cloudfront_distribution.md) 
 
 See AWS [Certificates Manager](https://us-east-1.console.aws.amazon.com/acm/home?region=us-east-1)
 
-## IAM
-cloud/aws_iam.md
 
 ## Backup
-cloud/aws_backup.md      
+cloud/aws_backup.md TODO     
 
 ## Batch
-cloud/aws_batch.md      
+cloud/aws_batch.md TODO
 
 ## EC2
-cloud/aws_ecs2.md    
+cloud/aws_ecs2.md TODO
+
+## IAM
+cloud/aws_iam.md TODO
