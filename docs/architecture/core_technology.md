@@ -41,7 +41,7 @@ With these considerations, we have the following:
  - AWS DynamoDB table storage
  - AWS Backup
  - AWS ElasticSearch
- - Arrow/Pyarrow for structured datasets ion S3 bucket.
+ - Arrow/Pyarrow for structured datasets in S3 bucket.
 
 ## Version Control
 
