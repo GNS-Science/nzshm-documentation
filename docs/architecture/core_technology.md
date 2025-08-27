@@ -53,7 +53,7 @@ With these considerations, we have the following:
     - tox
     - mypy
     - black
-    - linting
+    - flake8
  
 ## Documentation
  - python + mkdocs
