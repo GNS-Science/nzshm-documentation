@@ -20,7 +20,7 @@ often, and these are automated in **Github Actions** as shown above.
 
 ## Custom hostname configuration
 
-In this example we will configure a new public hostname for our website **weka.gns.cri.nz**. We will need an SSL certificaate, some DNS configuration, and an **AWS CloudFront
+In this example we will configure a new public hostname for our website **weka.gns.cri.nz**. We will need an SSL certificate, some DNS configuration, and an **AWS CloudFront
 distribution** to tie everything together.
 
  - **DNS names**. We have already chosen a name for this website (**weka.gns.cri.nz**) but if you need a new one you'll want to define that now.
