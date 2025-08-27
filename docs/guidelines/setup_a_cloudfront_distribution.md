@@ -35,7 +35,7 @@ If the tests complete OK, then we're done.
 
 ## Cache Invalidation
 
-This is typically relevant to the **Kororaa** and **Weka** Single Page Apps (SPA). Immeidiately after each new deployment it it advisable to invalidate the assocatied distribution (using `/*`). This helps to keep all the subcomponebts of the application 'in sync'. Without this sometimes rather odd errors can occur because of mixed components= versions.
+This is typically relevant to the **Kororaa** and **Weka** Single Page Apps (SPA). Immeidiately after each new deployment it is advisable to invalidate the assocatied distribution (using `/*`). This helps to keep all the subcomponebts of the application 'in sync'. Without this sometimes rather odd errors can occur because of mixed component versions.
 
 By contrast:
 
