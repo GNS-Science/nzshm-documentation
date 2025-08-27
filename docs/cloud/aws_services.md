@@ -41,7 +41,7 @@ See AWS [DynamoDB Dashboard (ap-southeast-2)](https://ap-southeast-2.console.aws
 
 All NSHM web APIs are [**serverless**](../cloud/serverless_framework.md), meaning that their compute is handled by Lambda functions, without "always on" web server infrastructure. In [NSHM Web Stacks](../architecture/api_gateway_deployments.md) there's a diagram showing how these are configured.
 
-NSHM lambda functions use Python3, excpet for the Graphql API Gateways which use Node. This is because graphql stitching
+NSHM lambda functions use Python3, except for the Graphql API Gateways which use Node. This is because graphql stitching
 features needed in the API Gateway services are only available from the [Apollo Graphql](https://www.apollographql.com/docs) who use the Node ecosystsem with javascript/typescript.
 
   - [Lambda discover (ap-southeast-2)](https://ap-southeast-2.console.aws.amazon.com/lambda/home?region=ap-southeast-2#/discover) lists all the lambdas.
