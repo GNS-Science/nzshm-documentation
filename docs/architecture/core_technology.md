@@ -52,7 +52,7 @@ With these considerations, we have the following:
  - for python:
     - tox
     - mypy
-    - formatting
+    - black
     - linting
  
 ## Documentation
