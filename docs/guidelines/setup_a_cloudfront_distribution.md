@@ -31,7 +31,7 @@ This approach is used for Weka and Kororaa web apps, the API gateways, and for a
     1. Check that the two host names (GNS and CloudFront ) both resolve to the same IP address.
     1. Check that the GNS domain now supports the HTTPS protocol.
 
-If the tests complete OK, then then we're done. 
+If the tests complete OK, then we're done. 
 
 ## Cache Invalidation
 
