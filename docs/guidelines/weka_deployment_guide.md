@@ -22,7 +22,7 @@ We want to be sure that in our deployment environment:
 - the Web Application is connecting to the API correctly e.g **nshm-api.gns.cri.nz/weka-app-api/graphql**.
 
 It is very rarely that we need to configure and check all of these at once. More commonly, a new User feature requires both API and UI changes.
-Typically this would require change in a particular microservice (and possibly it's underlying library), a schema refresh for the APIGW, and then some UI changes in the web application.  
+Typically this would require change in a particular microservice (and possibly its underlying library), a schema refresh for the APIGW, and then some UI changes in the web application.  
 
 Some elements of the stack are setup up once and are very unlikely to need change. These include:
 
