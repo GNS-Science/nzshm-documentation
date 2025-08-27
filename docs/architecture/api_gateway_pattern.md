@@ -5,7 +5,7 @@ The NSHM service APIs are [graphql standard](https://graphql.org/) apis. This me
 
 For specific configurations please see:
 
-  - **[Koraa deploymeent stack](kororaa_deployment_stack.md)**
+  - **[Koraa deployment stack](kororaa_deployment_stack.md)**
   - **[Weka deployment stack](weka_deployment_stack.md)**
  
 ### Example: Kororaa TEST 
