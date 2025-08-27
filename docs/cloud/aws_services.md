@@ -49,7 +49,7 @@ features needed in the API Gateway services are only available from the [Apollo 
 
 ## API Gateway
 
-API gateway provides the interface between HTTP(S) web requests and the serverless lambda functions for NSHM web APIs. It is configured via the [**serverless**](../cloud/serverless_framework.md) configuration file for each service i.e. not manually. But in the AWS console eone can see the accompanying dashboard, configuration and 
+API gateway provides the interface between HTTP(S) web requests and the serverless lambda functions for NSHM web APIs. It is configured via the [**serverless**](../cloud/serverless_framework.md) configuration file for each service i.e. not manually. But in the AWS console one can see the accompanying dashboard, configuration and 
 also the API keys associated with each service e.g. [the dashboard of the Kororaa APIGW service](https://ap-southeast-2.console.aws.amazon.com/apigateway/main/apis/8wq8w9xika/dashboard?api=8wq8w9xika&region=ap-southeast-2).
 
 ## CloudWatch
