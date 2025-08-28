@@ -1,4 +1,9 @@
-## TEST environment
+# NSHM Web Stack
+
+This diagram shows how the Kororaa and Weka web applications use a single DNS hostname for their APIs.  
+AWS API Gateway routes user requests to the appropriate service based on the URI path.
+
+## Example environment.
 
 ```mermaid
 graph TD

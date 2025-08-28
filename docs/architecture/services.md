@@ -1,50 +1,48 @@
-## NSHM web service API overview
+## NSHM web services
 
-Web service API for the NSHM are [graphql](https://graphql.org/) APIs, providing flexibility and control for the consumer over what information the API returns. Graphql APIs include a type system, built in documentation and standard error handling.
+Web service API for the NSHM are [graphql](https://graphql.org/) APIs, providing control for the consumer over what the API returns. Graphql APIs include a type system, built in documentation and standard error handling.
 
 ```mermaid
 graph TD
     classDef nshm stroke:lightgreen, stroke-width:3px
     classDef AWS stroke:orange, stroke-width:3px
+    classDef SVC stroke:powderblue, stroke-width:3px    
 
-    N-APIGW[nshm-kororaa-apigw]:::nshm
 
-    subgraph API[NSHM Python API services]
+    subgraph API[<strong>NSHM API services</strong>]
+        N-APIGW[nshm-kororaa-apigw]:::nshm
         K-API[kororaa-graphql-api]:::nshm
         S-API[solvis-graphql-api]:::nshm
-        T-API[nshm-toshi-api]:::nshm        
-    end
- 
-    subgraph SUP[<strong>NSHM support libraries</strong>]
-        toshi-hazard-store:::nshm
-        nzshm-model:::nshm
-        nzshm-common:::nshm
-        solvis-store:::nshm
-        solvis:::nshm
-        %% nzshm-model ~~~ nzshm-common ~~~ solvis
-        %% toshi-hazard-store ~~~ solvis-store
+        T-API[nshm-toshi-api]:::nshm    
     end
 
+    
+    subgraph CLOUD[<strong>AWS Cloud services</strong>]
+        l[[lambda]]:::AWS
+        S3[( SimpleStorage S3 )]:::AWS
+        D[(DynamoDB)]:::AWS
+        ES[[ElasticSearch]]:::AWS
+    end
+
+    API -.-> CLOUD
     N-APIGW --> S-API
     N-APIGW --> K-API
     N-APIGW --> T-API    
-
-    API -.-> SUP
 ```
 
 NSHM APIs and supporting packages are divided into domains or functional areas, each with a public github project source repository. These are:
  
 ## API Services
 
- - **[nshm-kororaa-apigw](/nzshm-documentation/components/nshm_kororaa_apigw/)** amalgamates the function-specific apis into an application API Gateway for the NSHM web app (aka Kororaa).
+ - **[nshm-kororaa-apigw](../components/nshm_kororaa_apigw.md)** amalgamates the function-specific apis into an application API Gateway for the NSHM web app (aka Kororaa).
 
  - **[nshm-toshi-api](https://github.com/GNS-Science/nshm-toshi-api)** provides the catalogue of all NHSM experiments including control metadata and all the input and output artefacts. Objects are uniquely identified and accessible across the higher-order services.
 
- - **[kororaa-graphql-api](https://github.com/GNS-Science/kororaa-graphql-api)** provides applicatoin specific information to the NSHM (kororaa) web application e.g. help, tooltips, document links.
+ - **[kororaa-graphql-api](https://github.com/GNS-Science/kororaa-graphql-api)** provides application specific information to the NSHM (kororaa) web application e.g. help, tooltips, document links.
  
- - **[solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api/)** provides analytical services to help explore and analyse key components of the NSHM source rate model.
+ - **[solvis-graphql-api](../components/solvis_graphql_api.md)** provides analytical services to help explore and analyse key components of the NSHM source rate model.
 
- For more general information please look at the **[API gateway pattern](./api_gateway_pattern)** and **[API gateway deployments](./api_gateway_deployments)** pages.
+ For more general information please look at the **[API gateway pattern](api_gateway_pattern.md)** and **[API gateway deployments](api_gateway_deployments.md)** pages.
 
 ## NSHM support libraries
  

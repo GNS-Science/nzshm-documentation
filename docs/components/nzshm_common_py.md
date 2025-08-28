@@ -1,6 +1,6 @@
 # nzshm-common-py
 
-[![pypi](https://img.shields.io/pypi/nzshm-common.svg)](https://pypi.org/project/nzshm-common/)
+[![pypi](https://img.shields.io/pypi/v/nzshm-common.svg)](https://pypi.org/project/nzshm-common/)
 [![python](https://img.shields.io/pypi/pyversions/nzshm-common.svg)](https://pypi.org/project/nzshm-common/)
 [![Build Status](https://github.com/GNS-Science/nzshm-common-py/actions/workflows/dev.yml/badge.svg)](https://github.com/GNS-Science/nzshm-common-py/actions/workflows/dev.yml)
 [![codecov](https://codecov.io/gh/GNS-Science/nzshm-common-py/branch/main/graphs/badge.svg)](https://codecov.io/github/GNS-Science/nzshm-common-py)

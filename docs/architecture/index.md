@@ -1,19 +1,19 @@
 # NSHM System Architecture
 
-Describing the primary tools and services supporting the NSHM and how we use them.
+This section describes the info technology supporting the wider NSHM team and the public-facing web applications. This infrastructure is developed and maintained by the **NZSHM Compute Working Group (CWG)** team of three.
 
 ## Table of contents
 
-This section will cover: 
+In this section you will find :
 
- - API webservices
- - NSHM libraries
- - Cloud Services
- - Data Management
- - Compute Abstraction
- - USGS:Opensha
- - GEM:Openquake  
-
+ - **Core technology** describes the main technologies used in NSHM. 
+ - **Applications** section covers the Web apps (2) and specialised analysis tools for scientists and engineers.
+ - **Web APIs** covers the NSHM service layers and service APIs.
+ - **Libraries** covers the various python libraries developed for NSHM.
+ - [ ] Cloud Services
+ - [ ] Data Management
+ - [ ] Compute Abstraction
+ 
 ## NSHM system guiding tenets
 
  - Make our work public at  https://github.com/GNS-Science.

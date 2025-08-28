@@ -14,9 +14,9 @@ graph TD
     %%SA -.- TG
 ```
 
- - **NSHM CWG [Scientific Process](./science_process/)** describes the processes and tools used to run experiments and build the NSHM models.
+ - **NSHM CWG [Scientific Process](./science_process/index.md)** describes the processes and tools used to run experiments and build the NSHM models.
 
- - **NSHM CWG [Systems Architecture](./architecture/)** covers the overarching design of the tools, services used run, publish and support the NSHM.
+ - **NSHM CWG [Systems Architecture](./architecture/index.md)** covers the overarching design of the tools, services used run, publish and support the NSHM.
 
  - **NSHM CWG Technical Guidelines** describes standards and common technical processes used by the CWG team to maintain and operate the NSHM systems. 
 

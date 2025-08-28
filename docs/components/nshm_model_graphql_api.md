@@ -1,11 +1,10 @@
-
-
 ## NSHM Model Graphql API
 
-A graphql API wrapping the [nzshm-model](/nzshm-documentation/components/nzshm_model/) library. 
 
 [![Build Status](https://github.com/GNS-Science/nshm-model-graphql-api/actions/workflows/dev.yml/badge.svg)](https://github.com/GNS-Science/nshm-model-graphql-api/actions/workflows/dev.yml)
 [![codecov](https://codecov.io/gh/GNS-Science/nshm-model-graphql-api/branch/main/graphs/badge.svg)](https://codecov.io/github/GNS-Science/nshm-model-graphql-api)
+
+A graphql API wrapping the [nzshm-model](/nzshm-documentation/components/nzshm_model/) library. 
 
 ## Links
 

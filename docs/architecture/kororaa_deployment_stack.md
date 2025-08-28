@@ -6,19 +6,19 @@ The **Kororaa App** is the public web site for NSHM scientific results.
 
 These components are developed and supported by the Compute Working Group team.
 
- - [Kororaa wep application ](/nzshm-documentation/components/kororaa/) is the Kororaa UI.
+ - [Kororaa wep application ](../components/kororaa.md) is the Kororaa UI.
     
     **Github:** [GNS-Science/kororaa](https://github.com/GNS-Science/kororaa).
 
- - [Kororaa API Gateway](/nzshm-documentation/components/nshm_kororaa_apigw/) is the application API for Kororaa.
+ - [Kororaa API Gateway](../components/nshm_kororaa_apigw.md) is the application API for Kororaa.
     
     **Github:** [GNS-Science/nshm-kororaa-apigw](https://github.com/GNS-Science/nshm-kororaa-apigw).
 
- - [solvis-graphql-api](/nzshm-documentation/components/solvis_graphql_api) is a graphql API wrapping the [solvis](https://github.com/GNS-Science/solvis) library. 
+ - [solvis-graphql-api](../components/solvis_graphql_api.md) is a graphql API wrapping the [solvis](https://github.com/GNS-Science/solvis) library. 
     
     **Github:** [GNS-Science/solvis-graphql-api](https://github.com/GNS-Science/solvis-graphql-api). Used by the Rupture Map explorer UI component.
 
- - [nshm-toshi-api](/nzshm-documentation/components/nshm_toshi_api) is a graphql API managing the NSHM experimental artefacts.
+ - [nshm-toshi-api](../components/nshm_toshi_api.md) is a graphql API managing the NSHM experimental artefacts.
     
     **Github:** [GNS-Science/nshm-toshi-api](https://github.com/GNS-Science/nshm-toshi-api).
 

@@ -1,5 +1,7 @@
 ## Weka Application API Gateway
 
+[![Build Status](https://github.com/GNS-Science/nshm-weka-apigw/actions/workflows/ci-test.yaml/badge.svg)](https://github.com/GNS-Science/nshm-weka-apigw/actions/workflows/ci-test.yaml)
+
 A graphql API Gateway for the NSHM Weka web app (aka Weka).
 
  - [Weka Deployment Stack](/nzshm-documentation/architecture/weka_deployment_stack/) describes the complete Weka stack.
