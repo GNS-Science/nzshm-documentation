@@ -72,6 +72,32 @@ wheels = [
 ]
 
 [[package]]
+name = "bracex"
+version = "3.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.11'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e1/60/e2a6409041cb3f8ce7ac3d6917b5b30c39f81a0a5b2d414ec30f36fd96bf/bracex-3.1.tar.gz", hash = "sha256:35c69fc105f08d77c02722e8ae707c656ff298dd4d26c89bcb3c98fca8bc3614", size = 29040, upload-time = "2026-10-11T15:26:07.143Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/05/79/c1ba46e1acd235affd36ce1d3346320ddcda663c9482a9e5f34727db1d11/bracex-3.1-py3-none-any.whl", hash = "sha256:52002b8455658c21f3b6e5eb0f662b57ec9085f42709e58bc86eeab5bc4c37d7", size = 11925, upload-time = "2026-10-11T15:26:05.683Z" },
+]
+
+[[package]]
+name = "bracex"
+version = "3.2.2"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.13'",
+    "python_full_version >= '3.11.5' and python_full_version < '3.13'",
+    "python_full_version >= '3.11' and python_full_version < '3.11.5'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2d/1f/b7ce2efe406b87bb3693d587b91bcd8fa9030888870ceff29e4a0d233cb2/bracex-3.2.2.tar.gz", hash = "sha256:d18976160b3ba01a57d5c53a5c8c3aa2506efa9e0a3a62467251f82b8f563fde", size = 34980, upload-time = "2026-11-07T21:28:25.433Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/21/b5/52a750a062db07ba056cde1c52c802b898a96b70953389a0b2247e18f210/bracex-3.2.2-py3-none-any.whl", hash = "sha256:284d59c4656e5a0421ff691402074bd5847049d50410535764a2c522a47095bc", size = 14151, upload-time = "2026-11-07T21:28:24.028Z" },
+]
+
+[[package]]
 name = "brotli"
 version = "1.2.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1057,11 +1083,16 @@ wheels = [
 
 [[package]]
 name = "mkdocs-include-markdown-plugin"
-version = "3.9.1"
+version = "7.3.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/4f/45/c48601119596157aeb453e1b1cc1eeda80ec50b6e8f508d916b39b5babe6/mkdocs_include_markdown_plugin-3.9.1.tar.gz", hash = "sha256:5e5698e78d7fea111be9873a456089daa333497988405acaac8eba2924a19152", size = 18223, upload-time = "2022-10-16T17:17:45.464Z" }
+dependencies = [
+    { name = "mkdocs" },
+    { name = "wcmatch", version = "11.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "wcmatch", version = "12.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/40/3f/d891a714a6e0153872760eed0ee7440512f6bb8effab5dccfb703b2c5ccc/mkdocs_include_markdown_plugin-7.3.1.tar.gz", hash = "sha256:d61f0d50035171ba4524ac36cf55229577e7b62bfb2d23a0b9db3397f59d3f71", size = 25564, upload-time = "2026-11-07T10:11:55.414Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/15/6a/6c0d064adb68e6553a18ccca5c187dcb0a7884a6a4a610f51401738a8001/mkdocs_include_markdown_plugin-3.9.1-py3-none-any.whl", hash = "sha256:f33687e29ac66d045ba181ea50f054646b0090b42b0a4318f08e7f1d1235e6f6", size = 17380, upload-time = "2022-10-16T17:17:43.755Z" },
+    { url = "https://files.pythonhosted.org/packages/9d/d3/1ad7117d7eb43f7224f48f1d25fce62b7f357509d3d78a5337920817e439/mkdocs_include_markdown_plugin-7.3.1-py3-none-any.whl", hash = "sha256:8f3fd8a0b71fbdee091bfe4df47aa9c011435e345828ccc6b5572dfd3d1b615d", size = 29713, upload-time = "2026-11-07T10:11:54.342Z" },
 ]
 
 [[package]]
@@ -1174,7 +1205,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "mkdocs", specifier = ">=1.4.3,<2.0" },
-    { name = "mkdocs-include-markdown-plugin", specifier = ">=3.0.0,<4.0" },
+    { name = "mkdocs-include-markdown-plugin", specifier = ">=7.3.1,<8.0" },
     { name = "mkdocs-material", specifier = ">=9.1.19,<10.0" },
     { name = "mkdocs-material-extensions", specifier = ">=1.1.1,<2.0" },
     { name = "mkdocs-pymdownx-material-extras", specifier = ">=2.4.3,<3.0" },
@@ -1810,6 +1841,38 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5a/bc/c04fbb2d6366afb0850e39c6d848f2d38066ff6dadccc886b3cb12c39e32/watchdog-7.1.0-py3-none-win_amd64.whl", hash = "sha256:16a5ba8694587cdbeae4ab8e6434cece994f9cce4e5bab03e61e6d1a0a93a643", size = 103260, upload-time = "2026-11-05T09:33:17.687Z" },
     { url = "https://files.pythonhosted.org/packages/92/9c/5a39ec8880c08e50f75d90f4e0e27b95dc91a04deb5e6e04871dd4b7e006/watchdog-7.1.0-py3-none-win_arm64.whl", hash = "sha256:5ed4b94365c53ffd51d88e47ca48d6afae02fb1bd849175a9a10927a2fbfb932", size = 103260, upload-time = "2026-11-05T09:33:18.987Z" },
     { url = "https://files.pythonhosted.org/packages/c0/aa/7a7210433e000f2491ddec7756d312009b0a47847e5c3457ccb03852cfdf/watchdog-7.1.0-py3-none-win_ia64.whl", hash = "sha256:0cfc5a6b3d4e76fc3e18fd371ee79d57945004da4105b589f71bb16966fd3e67", size = 103256, upload-time = "2026-11-05T09:33:20.159Z" },
+]
+
+[[package]]
+name = "wcmatch"
+version = "11.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.11'",
+]
+dependencies = [
+    { name = "bracex", version = "3.1", source = { registry = "https://pypi.org/simple" } },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/78/cd/0e028d8b7d906d51acdac537334fbe85f8284f2a8147d48bc9403af77a0d/wcmatch-11.1.tar.gz", hash = "sha256:f2b6f0fad6f5e2571498723fcb3c8facdd0fba0dcc139f31d32f592eb648153e", size = 129091, upload-time = "2026-10-10T13:10:54.573Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1e/22/c4adda5a3754b7fc9429a544a0673fa6922fdd7808eab09abe18616f6e38/wcmatch-11.1-py3-none-any.whl", hash = "sha256:2863afee97a7dd62e64f7feada864848c1a5e31cb331b3aa530fa1300d2d5d3c", size = 43417, upload-time = "2026-10-10T13:10:52.939Z" },
+]
+
+[[package]]
+name = "wcmatch"
+version = "12.0.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.13'",
+    "python_full_version >= '3.11.5' and python_full_version < '3.13'",
+    "python_full_version >= '3.11' and python_full_version < '3.11.5'",
+]
+dependencies = [
+    { name = "bracex", version = "3.2.2", source = { registry = "https://pypi.org/simple" } },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2e/17/bf44790f97414e37885830139933b4e96faac71560768ae9f9e458dbd936/wcmatch-12.0.1.tar.gz", hash = "sha256:4ea6acef75b657bf71ac8fa9520165bf5ae55120c4e655895a5b7d4c69896c5e", size = 163680, upload-time = "2026-11-07T21:45:37.072Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/24/8a5bbb3e73962b5bc901966f926b4fe25cbc9d1170ad9b4d9938441dbdc3/wcmatch-12.0.1-py3-none-any.whl", hash = "sha256:0e11b0bf1700bc8222ad5e7dc79fb326d9e0304458c7e2c25419ab6d26d07d8e", size = 51084, upload-time = "2026-11-07T21:45:35.661Z" },
 ]
 
 [[package]]
