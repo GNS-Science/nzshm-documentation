@@ -717,74 +717,6 @@ wheels = [
 ]
 
 [[package]]
-name = "griffe"
-version = "2.3.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.11'",
-]
-dependencies = [
-    { name = "griffecli", version = "2.3.0", source = { registry = "https://pypi.org/simple" } },
-    { name = "griffelib", version = "2.3.0", source = { registry = "https://pypi.org/simple" } },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/d5/03/75ca4d08a7eff164292d42cf72c7c510423b3414e66205f0ba5b35ad3034/griffe-2.3.0.tar.gz", hash = "sha256:aa5634c0d7802583ecd29a7fe335c02d462ffdf5ce8f51426a3d326f374e6d93", size = 247493, upload-time = "2026-09-04T15:08:15.364Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/61/f9/8bfacdb992aed404a3a53694689759841635bce93b86ddb621c1d7f2558c/griffe-2.3.0-py3-none-any.whl", hash = "sha256:92a41ff72eb1eb316cdcb7248a608f1313f9fbc6e35d5cffa5cf7c813b7db70b", size = 5072, upload-time = "2026-09-04T15:08:14.074Z" },
-]
-
-[[package]]
-name = "griffe"
-version = "2.4.1"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.13'",
-    "python_full_version >= '3.11.5' and python_full_version < '3.13'",
-    "python_full_version >= '3.11' and python_full_version < '3.11.5'",
-]
-dependencies = [
-    { name = "griffecli", version = "2.4.1", source = { registry = "https://pypi.org/simple" } },
-    { name = "griffelib", version = "2.4.1", source = { registry = "https://pypi.org/simple" } },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/33/a4/be055b9ced02e39ac0ab85960e0ed3d8c6017c03e90965e77ff276684418/griffe-2.4.1.tar.gz", hash = "sha256:766123e26ec35b2ead63202e9e43ec309d876085d571b7df288256cd6fe4a3ef", size = 450805, upload-time = "2026-10-22T11:20:02.532Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/29/93/67a1814b4b13e9a5cc02510dbfa1d3937603140192a701c96d861b272611/griffe-2.4.1-py3-none-any.whl", hash = "sha256:ca58ccdb1d8590ad062fad837a875dd704f94acf7a0104795a098a991ceaf728", size = 5100, upload-time = "2026-10-22T11:19:58.365Z" },
-]
-
-[[package]]
-name = "griffecli"
-version = "2.3.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.11'",
-]
-dependencies = [
-    { name = "colorama" },
-    { name = "griffelib", version = "2.3.0", source = { registry = "https://pypi.org/simple" } },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/5c/15/f70539f7efb44f27d209b43e386b1a5397bd476879ff19a206b75454f58e/griffecli-2.3.0.tar.gz", hash = "sha256:916fdc851cf51d38e9b5ab82550305df45e5981d5dfe65d346544464abedb3ec", size = 59676, upload-time = "2026-09-04T15:08:16.426Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/06/8c/8ffa4272d6bf85a0abe8898ef74ef41d505317bb4103e14a11d45d799dce/griffecli-2.3.0-py3-none-any.whl", hash = "sha256:f94653edcb52ebcac21eaeb3b7121b065a636174eddf2bd558b5935e72a553e8", size = 11593, upload-time = "2026-09-04T15:08:11.739Z" },
-]
-
-[[package]]
-name = "griffecli"
-version = "2.4.1"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.13'",
-    "python_full_version >= '3.11.5' and python_full_version < '3.13'",
-    "python_full_version >= '3.11' and python_full_version < '3.11.5'",
-]
-dependencies = [
-    { name = "colorama" },
-    { name = "griffelib", version = "2.4.1", source = { registry = "https://pypi.org/simple" } },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c9/8e/d3130e17ae27c900f8f76c96ceb2f02edfe0c7db0366b49e033f81ff81d7/griffecli-2.4.1.tar.gz", hash = "sha256:6db9acad984990b08c833ab5ec73d5a604e317b2290074d04c91ca9e52d35a7b", size = 61762, upload-time = "2026-10-22T11:20:01.054Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3f/dc/5cdbbbfd1a9e8c0e9b6b8b6e6d839e67f82cb138b77cf74856e5b80527de/griffecli-2.4.1-py3-none-any.whl", hash = "sha256:1678938e7b75a0aa34d3e408d550707a192f5297c3005aa0f92660648c30bc0a", size = 11774, upload-time = "2026-10-22T11:19:57.134Z" },
-]
-
-[[package]]
 name = "griffelib"
 version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1217,20 +1149,39 @@ wheels = [
 
 [[package]]
 name = "mkdocstrings-python"
-version = "1.19.0"
+version = "2.0.9"
 source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "griffe", version = "2.3.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "griffe", version = "2.4.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "mkdocs-autorefs", version = "1.4.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "mkdocs-autorefs", version = "1.4.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "mkdocstrings", version = "1.0.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "mkdocstrings", version = "1.0.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
+resolution-markers = [
+    "python_full_version < '3.11'",
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/75/1c/3af8413919b0839b96a78f60e8bd0dfd26c844d3717eeb77f80b43f5be1c/mkdocstrings_python-1.19.0.tar.gz", hash = "sha256:917aac66cf121243c11db5b89f66b0ded6c53ec0de5318ff5e22424eb2f2e57c", size = 204010, upload-time = "2025-11-10T13:30:55.915Z" }
+dependencies = [
+    { name = "griffelib", version = "2.3.0", source = { registry = "https://pypi.org/simple" } },
+    { name = "mkdocs-autorefs", version = "1.4.4", source = { registry = "https://pypi.org/simple" } },
+    { name = "mkdocstrings", version = "1.0.6", source = { registry = "https://pypi.org/simple" } },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/96/11/640067d1ad713ea99c233e53e57a4c300d9885f904a61371d7ef90dea549/mkdocstrings_python-2.0.9.tar.gz", hash = "sha256:ae945637dc0618c6beedbee169f10c0234b77f322c53db3fc9fb4c29b3013038", size = 203006, upload-time = "2026-09-22T13:43:27.712Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/98/5c/2597cef67b6947b15c47f8dba967a0baf19fbdfdc86f6e4a8ba7af8b581a/mkdocstrings_python-1.19.0-py3-none-any.whl", hash = "sha256:395c1032af8f005234170575cc0c5d4d20980846623b623b35594281be4a3059", size = 143417, upload-time = "2025-11-10T13:30:54.164Z" },
+    { url = "https://files.pythonhosted.org/packages/62/0f/f7f926cfa06317bbdbd3cf0ff82f9e3a91767352eb01519c81499fddf575/mkdocstrings_python-2.0.9-py3-none-any.whl", hash = "sha256:c0233eff3f84d78110df50541918e7ec2bcff8e1614faddea34290a90321a416", size = 105698, upload-time = "2026-09-22T13:43:26.345Z" },
+]
+
+[[package]]
+name = "mkdocstrings-python"
+version = "2.0.10"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.13'",
+    "python_full_version >= '3.11.5' and python_full_version < '3.13'",
+    "python_full_version >= '3.11' and python_full_version < '3.11.5'",
+]
+dependencies = [
+    { name = "griffelib", version = "2.4.1", source = { registry = "https://pypi.org/simple" } },
+    { name = "mkdocs-autorefs", version = "1.4.5", source = { registry = "https://pypi.org/simple" } },
+    { name = "mkdocstrings", version = "1.0.8", source = { registry = "https://pypi.org/simple" } },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fb/43/4783d5606de4f5e4bea10388c8741b0c40d03e7cb9527b94ad35966351f5/mkdocstrings_python-2.0.10.tar.gz", hash = "sha256:5e34ae56b2f20a57807ee479d603ddc5ec7cc6d2252c4c177754627ef2d3b833", size = 207682, upload-time = "2026-10-19T15:58:07.934Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/be/1b/fc924a97a237adda47f15c1b0cc271639e6b181ab3f95500fbf060c79a69/mkdocstrings_python-2.0.10-py3-none-any.whl", hash = "sha256:4a3aaeebb25ba5ae57a8f9e75432fe4571984889602f2b2f7d672faa760e9062", size = 105538, upload-time = "2026-10-19T15:58:06.287Z" },
 ]
 
 [[package]]
@@ -1246,7 +1197,8 @@ dependencies = [
     { name = "mkdocs-with-pdf" },
     { name = "mkdocstrings", version = "1.0.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "mkdocstrings", version = "1.0.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "mkdocstrings-python" },
+    { name = "mkdocstrings-python", version = "2.0.9", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "mkdocstrings-python", version = "2.0.10", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
 ]
 
 [package.metadata]
@@ -1258,7 +1210,7 @@ requires-dist = [
     { name = "mkdocs-pymdownx-material-extras", specifier = ">=2.4.3,<3.0" },
     { name = "mkdocs-with-pdf", specifier = ">=0.9.3,<0.10" },
     { name = "mkdocstrings", specifier = ">=1.0,<2.0" },
-    { name = "mkdocstrings-python", specifier = ">=1.2.1,<2.0" },
+    { name = "mkdocstrings-python", specifier = ">=2.0,<3.0" },
 ]
 
 [[package]]
