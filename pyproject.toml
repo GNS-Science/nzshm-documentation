@@ -5,7 +5,7 @@ description = "mkdocs documentation package for NSHM"
 authors = [{ name = "NSHM Project", email = "nshm@gns.cri.nz" }]
 license = "AGPL"
 readme = "README.md"
-requires-python = ">=3.10,<4.0"
+requires-python = ">=3.12"
 dependencies = [
     "mkdocs>=1.4.3,<2.0",
     "mkdocs-include-markdown-plugin>=7.3.1,<8.0",
