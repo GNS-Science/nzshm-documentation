@@ -1,0 +1,20 @@
+# Test that the documentation builds (no deploy)
+name: test build workflow
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-docs:
+    # reusable workflow requests these; caller must grant them
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    uses: GNS-Science/nshm-github-actions/.github/workflows/python-deploy-docs-uv.yml@main
+    with:
+      python-version: '3.12'
+      optional-dependency-groups: ''
+      build-only: true
